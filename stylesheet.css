@@ -1,3 +1,5 @@
+
+
 .section-1{
     background: url(image/group-35.png);
     width: 100%;
@@ -192,10 +194,7 @@
   font-weight: bold;
   color: #4f4f4f;
 }
-.item2{
-  /* margin-right: 100px; */
 
-}
 .blog{
 
   font-family: Roboto;
@@ -228,23 +227,27 @@
   font-size: 20px;
   font-weight: bold;
   text-align: left;
-  color: #3d4046
+  color: #3d4046;
+  padding-left: 20px;
 }
 .small-txt-grp-28{
   font-family: Roboto;
   font-size: 13px;
   text-align: left;
   color: #a3a3a3;
+  padding-left: 20px
 }
 .s-txt-grp-28{
   font-family: Roboto;
   font-size: 16px;
   text-align: left;
-  color: #565656
+  color: #565656;
+  padding-left: 20px;
 }
 .read-post{
   display: flex;
-  gap:5px
+  gap:5px;
+  padding-left: 20px;
 }
 .read-post2{
   font-family: Roboto;
@@ -280,9 +283,9 @@
   width:357px;
   gap:27px;
   padding: 47px 30px 30px 38px;
-  
+  background-color: #fff;
   border-radius: 4px;
-  box-shadow: 0 0 5px 0 #1d7a8c;
+  box-shadow: -5px 0px 0px 0px rgb(29 122 140);
 }
 .txt-image{
   display:flex;
@@ -315,6 +318,7 @@
 .get-newsletter{
   font-family: Roboto;
   font-size: 18px;
+  font-weight: bold;
   text-align: center;
   color: #353548;
   margin-top: 55px;
@@ -325,6 +329,7 @@
   margin-bottom: 53px;
 }
 .email{
+  text-align: center;
   width: 233px;
   height: 40px;
   border-radius: 20px;
@@ -339,6 +344,20 @@
   border-radius: 20px;
   background-color: #ff7b6d;
 
+}
+.msg-us{
+  width: 48px;
+  height: 48px;
+  margin-left: 450px;
+  margin-top: -50px;
+}
+.up-aero{
+  background:#525252;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin-left: -450px;
+  margin-top: -50px;
 }
 .footer{
   background-color: black;
@@ -372,28 +391,36 @@
 }
 .face-insta{
   display: flex;
-    margin-top: -9px;
-    margin-left: 270px;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+  margin-top: -19px;
+  margin-left: 150px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 .face{
-  width:9px;
-  height: 18px;
+  width: 10px;
+  height: 19px;
 }
 .insta{
-  width:9px;
-  height: 18px;
+  width: 10px;
+  height: 19px;
+}
+.small-footer {
+  color: white;
+  background-color: #292929;
+  height: 60px;
 }
 
-@media only screen and (max-width:1140px) {
-  .navbar{
-    flex-direction: ;
-  }
-  .nav-btn{
-    flex-direction: column;
-
-  }
-  
+.ok-btn{
+  border-radius: 27px;
+  border: 1px solid  #F1F1F1;
+  background-color: #EED507;
+  color: black;
+  margin-right:15px;
+  margin-top: -55px;
+  width: 100px;
+  height: 40px;
+  float: right;
 }
+
+
