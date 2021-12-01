@@ -49,6 +49,8 @@
     justify-content: center;
 }
 .faq-banner{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: auto;
     margin-bottom: 32px;
@@ -58,6 +60,10 @@
     font-family: Roboto;
     font-weight: bolder;
     font-size: 36px;
+}
+.img-diamond{
+    display: flex;
+    margin:9px auto;
 }
 p{
     font-family: Roboto;
@@ -166,3 +172,55 @@ p{
   margin-left: -450px;
   margin-top: -50px;
 }
+.footer{
+    background-color: black;
+    height: 100%;
+    width: 100%; 
+  }
+  .cont-logo-1{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .img-white-logo{
+    width: 106px;
+    height: 78px;
+    margin: 27px 122px 30px;
+    
+  }
+  .home-about{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    margin-left: 250px;
+    width: 575px
+  }
+  .home-about-list{
+    font-family: Roboto;
+    font-size: 14px;
+    text-align: left;
+    color: #f1f1f1;
+  }
+  .face-insta{
+    display: flex;
+    margin-top: -19px;
+    margin-left: 150px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .face{
+    width: 10px;
+    height: 19px;
+  }
+  .insta{
+    width: 10px;
+    height: 19px;
+  }
+  .small-footer {
+    color: white;
+    background-color: #292929;
+    height: 60px;
+  }
+  

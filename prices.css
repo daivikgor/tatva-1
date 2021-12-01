@@ -1,0 +1,153 @@
+.navbar{
+    background-color: #4F4F4F;
+    width: 100%;
+    height: 100%;
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.nav-img{
+    width: 73px;
+    height: 54px;
+    margin: 10px 17px;
+}
+.nav-btn{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    list-style-type:none;
+}
+
+.nav-btn li button{
+    text-decoration: none;
+    color: white;
+    width:auto;
+    border-radius: 20px;
+    padding-right:20px;
+    background-color: #29626D; 
+
+}
+.nav-btn li a{
+    margin-top:5px;
+}
+.button-book{
+    width:161px;
+    height: 40px;
+    text-decoration: none;
+    background: #00607200; 
+    border: 1px solid #FFFFFF80;
+    border-radius: 20px;
+    opacity: 1;
+    color: white;
+    text-align: center;
+}
+.nav-btn .book{
+    padding:0px 14px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    justify-content: center;
+}
+.price-banner{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+.txt-faq{
+    text-align: center;
+    font-family: Roboto;
+    font-weight: bolder;
+    font-size: 36px;
+}
+.img-diamond{
+    display: flex;
+    margin:-20px auto 42px auto;
+}
+.container-1{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cover-1{
+    display:flex;
+    flex-direction: column;
+    width: 553px;
+    background-color: #fff;
+    border: solid 1px #b0c9ce;
+    margin-bottom: 51px;
+}
+.one-time{
+    background-color: #1d7a8c;
+    text-align: center;
+    font-size: 24px;
+    font-family: Roboto;
+    color: #fff;
+    padding:10px;
+}
+.rupee{
+    font-family: Roboto;
+    font-size: 30px;
+    color: #646464;
+    text-align: center;
+}
+.tick{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-left: 150px;
+}
+.img-tick{
+  width: 25px;
+  height: 24px;
+}
+.lower-price{
+    text-align: center;
+}
+.container-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 56px;
+    background-color: #fff;
+}
+.extra-service{
+    text-align:center;
+    font-size: 24px;
+    font-family: Roboto;
+    color: #000;
+    padding:10px;
+}
+.non{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+}
+.slide{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ser-img{
+    border: 2px solid #CCCCCC;
+    border-radius: 50%;
+    padding: 30px 35px;
+    width:108px;
+    height: 108px;
+    
+}
+.text-1-service{
+    text-align:center;
+    font-size: 24px;
+    font-family: Roboto;
+    color: #646464;
+}
+.text-2-service{
+    text-align:center;
+    font-size: 24px;
+    font-family: Roboto;
+    color: #1D7A8C;
+}
+
