@@ -35,3 +35,95 @@ ul li{
 .active a{
     color: #1FB6FF;
 }
+.background-admin{
+    background-color: #F2F4F5;
+    padding-top: 29px;
+    padding-left:23px;
+}
+.txt-btn{
+    display: inline-flex;
+  }
+  .txt-service{
+    font-size: 22px;
+    font-family: Roboto;
+    color: #646464;
+    font-weight: bold;
+  }
+  .btn-export{
+    background-color: #1FB6FF;
+    color: #ffff;
+    font-size: 14px;
+    font-family: Roboto;
+    border:0;
+    min-width: 70px;
+    min-height: 34px;
+  }
+  .form-admin{
+      background-color: white;
+      padding-top:20px;
+      padding-bottom: 10px;
+
+  }
+  .btn-search{
+      background-color: #1FB6FF;
+      color:#fff;
+      font-size: 14px;
+      font-family: Roboto;
+      border:0;
+      min-width:80px;
+      min-height: 40px;
+  }
+  .btn-clear{
+      background-color: #fff;
+      color: #646464;
+      font-size: 14px;
+      font-family: Roboto;
+      border:1px solid #DEDDDD;
+      min-width:80px;
+      max-height: 40px;
+  }
+  .btn-btn{
+      margin:0 10px;
+  }
+.table-service{
+    margin-top:20px;
+    font-family: Roboto;
+    font-size:16px;
+    border :1px solid #e1e1e1;
+    background-color: #fff;
+    color: #646464;
+}
+.table-service thead{
+    border:1px solid #E1E1E1;
+    background-color: #F9F9F9;
+    color:#646464;
+
+}
+.btn-completed{
+    background-color: #67B644;
+    color: #fff;
+    font-size: 13px;
+    font-family: Roboto;
+    border:0px;
+  }
+  .btn-canceled{
+    background-color: #FF6B6B;
+    color: #fff;
+    font-size:13px;
+    font-family: Roboto;
+    border:0;
+    /* min-width:80px; */
+  }
+  .copyright{
+      font-size: 14px;
+      color: #A2A6A8;
+  }
+  .txt-show{
+    font-size: 14px;
+    color: #646464;
+    font-family:Roboto;
+  }
+  .dropdown-toggle::after{
+      display: none;
+
+  }

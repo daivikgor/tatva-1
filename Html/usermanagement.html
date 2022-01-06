@@ -32,7 +32,7 @@
         </div>
     </nav>
 
-    <section class="left-container">
+    <section class="container-fluid">
         <div class="row">
             <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-3 table-responsive dash">
                 <table class="table table-hover">
@@ -77,6 +77,288 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="col-xl-10 col-lg-9 col-md-9 col-sm-9 col-9 background-admin">
+                <div class="txt-btn">
+                    <p class="txt-service">User Management</p>
+                </div>
+                <button class="btn-export float-right"><img src="Assets/image/add.png">Add New User</button>
+                <div class="form-admin">
+                    <form class="form">
+                        <div class="row">
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option value="username">Username</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option value="userroll">User Roll</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="service-provider">Sevrice Provider</option>
+                                    <option value="customer">Customer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text">+44</span>
+                              </div>
+                              <input type="tel" class="form-control" id="phone" name="mobile Number" placeholder="Phone number">
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class=form-group>
+                              <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Zipcode">
+                            </div>
+                          </div>
+                        <div class="btn-btn">
+                        <button type="submit" class=btn-search>search</button>
+                        </div>
+                        
+                        <button type="reset" class="btn-clear">Clear</button>
+                    
+
+
+                      </div>
+
+                    </form>
+                    
+                </div>
+                <div class="table-responsive table-service">
+                <table class="table table-service table-hover">
+                    <thead>
+                        <tr>
+                            <th>User Name <span><a href="#"><img src="Assets/image/sort.png"></a></span></th>
+                            <th >User Type </th>
+                            <th >Role </th>
+                            <th >Postal Code <span><a href="#"><img src="Assets/image/sort.png"></a></span></th>
+                            <th >City </th>
+                            <th >Radius <span><a href="#"><img src="Assets/image/sort.png"></a></span></th>
+                            <th >User Status <span><a href="#"><img src="Assets/image/sort.png"></a></span></th>
+                            <th >Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>lyum watson</td>
+                            
+                            <td>Call Center</td> 
+
+                            <td>Inquiry Manager</td>
+
+                            <td>12345</td>
+
+                            <td>Berlin</td>
+                            
+                            <td></td>
+                            <td><button class="btn-completed">Active</button></td>
+                            <td>
+                                <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Edit</a>
+                                    <a class="dropdown-item">Deactivate</a>
+                                    <a class="dropdown-item">Service history</a>
+                                  </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>John Smith</td>
+                            
+                            <td>Customer</td> 
+
+                            <td></td>
+
+                            <td>12345</td>
+
+                            <td>Berlin</td>
+                            
+                            <td>10km</td>
+                            <td><button class="btn-completed">Active</button></td>
+                            <td>
+                                <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Edit</a>
+                                    <a class="dropdown-item">Deactivate</a>
+                                    <a class="dropdown-item">Service history</a>
+                                  </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>John Smith</td>
+                            
+                            <td>Call Center</td> 
+
+                            <td>Content Creator</td>
+
+                            <td>12345</td>
+
+                            <td>Berlin</td>
+                            
+                            <td></td>
+                            <td><button class="btn-completed">Active</button></td>
+                            <td>
+                                <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Edit</a>
+                                    <a class="dropdown-item">Deactivate</a>
+                                    <a class="dropdown-item">Service history</a>
+                                  </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>lyum watson</td>
+                            
+                            <td>Call Center</td> 
+
+                            <td>Inquiry Manager</td>
+
+                            <td>12345</td>
+
+                            <td>Berlin</td>
+                            
+                            <td></td>
+                            <td><button class="btn-completed">Active</button></td>
+                            <td><a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Edit</a>
+                                    <a class="dropdown-item">Deactivate</a>
+                                    <a class="dropdown-item">Service history</a>
+                                  </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>lyum watson</td>
+                            
+                            <td>Call Center</td> 
+
+                            <td></td>
+
+                            <td>12345</td>
+
+                            <td>Berlin</td>
+                            
+                            <td></td>
+                            <td><button disabled class="btn-canceled">Inactive</button></td>
+                            <td>
+                                
+                                <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Edit</a>
+                                    <a class="dropdown-item">Deactivate</a>
+                                    <a class="dropdown-item">Service history</a>
+                                  </div>
+                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>lyum watson</td>
+                            
+                            <td>Call Center</td> 
+
+                            <td></td>
+
+                            <td>12345</td>
+
+                            <td>Berlin</td>
+                            
+                            <td></td>
+                            <td><button class="btn-completed">Active</button></td>
+                            <td><a href="#"><img src="Assets/image/icons-more.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>lyum watson</td>
+                            
+                            <td>Call Center</td> 
+
+                            <td>Inquiry Manager</td>
+
+                            <td>12345</td>
+
+                            <td>Berlin</td>
+                            
+                            <td></td>
+                            <td><button class="btn-completed">Active</button></td>
+                            <td><a href="#"><img src="Assets/image/icons-more.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>lyum watson</td>
+                            
+                            <td>Call Center</td> 
+
+                            <td></td>
+
+                            <td>12345</td>
+
+                            <td>Berlin</td>
+                            
+                            <td></td>
+                            <td><button class="btn-completed">Active</button></td>
+                            <td><a href="#"><img src="Assets/image/icons-more.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>lyum watson</td>
+                            
+                            <td>Call Center</td> 
+
+                            <td></td>
+
+                            <td>12345</td>
+
+                            <td>Berlin</td>
+                            
+                            <td></td>
+                            <td><button class="btn-completed">Active</button></td>
+                            <td><a href="#"><img src="Assets/image/icons-more.png"></a></td>
+                        </tr>
+
+                        <tr>
+                            <td>lyum watson</td>
+                            
+                            <td>Call Center</td> 
+
+                            <td></td>
+
+                            <td>12345</td>
+
+                            <td>Berlin</td>
+                            
+                            <td></td>
+                            <td><button class="btn-completed">Active</button></td>
+                            <td><a href="#"><img src="Assets/image/icons-more.png"></a></td>
+                        </tr>
+
+
+
+                    </tbody>
+
+                    
+                </table>
+                <div class="row">
+                    <div class="col-1 txt-show">show</div>
+                    <div class="col-1"><span>
+                        <select class="show" id="show">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                        </select>
+                    </span></div>
+                    <div class="col-2 txt-show">
+                        entries
+                    </div>
+                </div>
+                
+                </div>
+                
+                <h6 class="copyright">©2018 Helperland. All rights reserved.</h6>
+
+
 
             </div>
         </div>
