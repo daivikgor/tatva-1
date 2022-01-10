@@ -88,3 +88,32 @@ ul li{
     border-radius: 20px;
     background-color: #ff7b6d;
   }
+  .footer{
+    background-color: black; padding-top: 10px;
+  }
+  .logo-footer{
+    display: flex;justify-content: center;align-items: center;
+  }
+  .img-footer{
+    width: 120px;height: 92px;
+  }
+  .footer-links-1{
+    text-align: center;display: flex;justify-content: center;align-items: center;
+  }
+  .footer-links{
+    word-spacing:15px;
+    color: white;
+  }
+  .footer-links a{
+    color: white;
+  }
+  .social-footer{
+    background-color: black;display: flex;justify-content: center;align-items: center;
+  }
+  
+  .footer-2{
+    text-align: center;display: flex;justify-content: center;align-items: center;color: #9ba0a3;
+  }
+  .footer-3{
+    text-align: center;display: flex;justify-content: center;align-items: center;color: #9ba0a3;
+  }

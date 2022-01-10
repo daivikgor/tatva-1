@@ -5,7 +5,7 @@ h2, .h2 { font-size: 40px; font-weight: 700; color: #4F4F4F; line-height: 1.2; }
 h3, .h3 { font-size: 30px; font-weight: 700; color: #565656; line-height: 1.2; }
 p { font-size: 16px; font-weight: 400; color: #4F4F4F; line-height: 1.3; }
 
-.section-1{
+.section-10{
     background: url("/Assets/image/group-35.png");
     width: 100%;
     height: 100%;
@@ -13,49 +13,46 @@ p { font-size: 16px; font-weight: 400; color: #4F4F4F; line-height: 1.3; }
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    /* background-size: contain; */
 }
-.navbar{
-    display : flex;
-    width: inherit;
-    justify-content: space-between;
+.trans{
+  background: transparent;
+}
+.helperland-logo{
+  margin-left: 10px;
+
+}
+.bar-btn{
+  color: white;
+  font-size: 28px;
+}
+.nav-link{
+  color: white;
 }
 
-.nav-img{
-    width: 175px;
-    height: 130px;
-    margin: 10px 17px;
+.nav-link{
+  color: white;
+}
+.nav-item a:hover{
+  color: white;
+}
+.nav-item{
+  margin:0px 8px;
+}
+.Rounded-Rectangle{
+  border-radius: 25px;
+  border:1px solid #ffff;
+  padding: 3px 25px;
+}
+.Rounded-Rectangle:hover{
+  background-color: white;
+}
+.Rounded-Rectangle a:hover{
+  color: #4F4F4F;
 }
 
-.nav-btn{
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-}
-.nav-btn li{
-  margin-top:-25px;
-  margin-right:18px;
-}
-
-.nav-btn li .book{
-   text-decoration: none;
-   color: ivory;
-}
-.nav-btn li .flag{
-  margin-right:-10px;
-}
-
-.nav-btn li button{
-   text-decoration: none;
-   color: ivory;
-   background: transparent;
-   border: 1px solid ivory;
-   padding: 11px 30px;
-   border-radius : 20px;
-}
 .txt{
-  width: 388px;
-  height: 46px;
+  /* width: 388px;
+  height: 46px; */
   margin: 130px 120px 22px 41px;
   font-family: Roboto;
   font-size: 49px;
@@ -63,7 +60,7 @@ p { font-size: 16px; font-weight: 400; color: #4F4F4F; line-height: 1.3; }
   font-stretch: normal;
   font-style: normal;
   letter-spacing: normal;
-  text-align: center;
+  /* text-align: center; */
   color: #fff
 }
 .loreum{
@@ -154,15 +151,11 @@ p { font-size: 16px; font-weight: 400; color: #4F4F4F; line-height: 1.3; }
 
 }
 .why-hyperland{
-  width: 282px;
-  height: 38px;
-  margin: 87px 639px 84px 639px;
+  margin: 84px 0;
   font-family: Roboto;
+  text-align: center;
   font-size: 38px;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  text-align: left;
   color:#3d3635;
 }
 .img-grp-2-holder{
@@ -195,7 +188,9 @@ p { font-size: 16px; font-weight: 400; color: #4F4F4F; line-height: 1.3; }
 }
 
 .lore-container{
+  justify-content: center;
   display:flex;
+  flex-wrap:wrap;
   gap: 97px;
   margin:200px 200px 41px 200px;
 }
@@ -205,7 +200,16 @@ p { font-size: 16px; font-weight: 400; color: #4F4F4F; line-height: 1.3; }
   font-weight: bold;
   color: #4f4f4f;
 }
-
+.loreum-4{
+  font-family: Roboto;
+  font-size: 18px;
+  color: #4f4f4f;
+}
+.group-36{
+  align-items: center;
+  max-width:403px;
+  max-height: 337px;
+}
 .blog{
 
   font-family: Roboto;
@@ -371,68 +375,60 @@ p { font-size: 16px; font-weight: 400; color: #4F4F4F; line-height: 1.3; }
   margin-top: -50px;
 }
 .footer{
-  background-color: black;
-  height: 100%;
-  width: 100%; 
+  background-color: black; padding-top: 10px;
 }
-.cont-logo-1{
-  display: flex;
-  flex-wrap: wrap;
+.logo-footer{
+  display: flex;justify-content: center;align-items: center;
 }
-.img-white-logo{
-  width: 106px;
-  height: 78px;
-  margin: 27px 122px 30px;
-  
+.img-footer{
+  width: 120px;height: 92px;
 }
-.home-about{
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  justify-content: center;
-  margin-left: 250px;
-  width: 575px
+.footer-links-1{
+  text-align: center;display: flex;justify-content: center;align-items: center;
 }
-.home-about-list{
-  font-family: Roboto;
-  font-size: 14px;
-  text-align: left;
-  color: #f1f1f1;
-}
-.face-insta{
-  display: flex;
-  margin-top: -19px;
-  margin-left: 150px;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
-.face{
-  width: 10px;
-  height: 19px;
-}
-.insta{
-  width: 10px;
-  height: 19px;
-}
-.small-footer {
+.footer-links{
+  word-spacing:15px;
   color: white;
-  background-color: #292929;
-  height: 60px;
+}
+.footer-links a{
+  color: white;
+}
+.social-footer{
+  background-color: black;display: flex;justify-content: center;align-items: center;
 }
 
-.ok-btn{
-  border-radius: 27px;
-  border: 1px solid  #F1F1F1;
-  background-color: #EED507;
-  color: black;
-  margin-right:15px;
-  margin-top: -55px;
-  width: 100px;
-  height: 40px;
-  float: right;
+.footer-2{
+  text-align: center;display: flex;justify-content: center;align-items: center;color: #9ba0a3;background-color: #292929;
 }
+.footer-3{
+  text-align: center;display: flex;justify-content: center;align-items: center;color: #9ba0a3;background-color: #292929 ;padding-top:10px;
+}
+.btn-ok{
+  background: #EED507;
+  float: left;
+  color:#4F4F4F ;
+  font-size: 16px;
+  min-width: 90px;
+  min-height: 40px;
+  border-radius: 50px;
+}
+
+@media (max-width:1456px){
+  .lore-container{
+    gap:30px;
+  }
+}
+@media(max-width:1184px){
+  .remove{display: none;}
+}
+@media(max-width:520px){
+  .group-36{  max-width:350px;
+  max-height: 258px;
+   }
+}
+
+
+
 /* @media only screen and (max-width: 600px){
   .section-1{
     width: 50%;

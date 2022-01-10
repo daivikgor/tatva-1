@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service requests</title>
+    <link rel="stylesheet" href="Assets/css/admin.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/3960232895.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md" style="background-color: #1FB6FF;">
+        <h2 class="navbar-brand txt-logo" style="font-size:37.5px">helperland</h2>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapseisable">
+            <span class="navbar-toggler-icon">
+                <i class="fas fa-bars" style="color: white;font-size: 28px;"></i>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapseisable">
+            <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item">
+                  <a href="#"> <img src="Assets/image/user.png"></a><span class="txt-user">James Smith</span>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><img src="Assets/image/logout.png"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-3 table-responsive dash">
+                <table class="table table-hover">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr class="align-items-center">
+                            <td><a href="#">Service Management</a></td>
+                        </tr>
+                        <tr class="align-items-center">
+                            <td><a href="#">Role Management</a></td>
+                        </tr>
+                        <tr class="align-items-center">
+                            <td><a href="#">Coupon Code Management</a></td>
+                        </tr>
+                        <tr class="align-items-center">
+                            <td><a href="#">Escalation Management</a></td>
+                        </tr>
+                        <tr class="align-items-center active">
+                            <td><a href="#">Service Requests</a></td>
+                        </tr>
+                        <tr class="align-items-center">
+                            <td><a href="#">Service Providers</a></td>
+                        </tr>
+                        <tr class="align-items-center">
+                            <td><a href="#">User Management</a></td>
+                        </tr>
+                        <tr class="align-items-center">
+                            <td><a href="#">Finance Module</a></td>
+                        </tr>
+                        <tr class="align-items-center">
+                            <td><a href="#">Zip Code Management</a></td>
+                        </tr>
+                        <tr class="align-items-center">
+                            <td><a href="#">Rating Management</a></td>
+                        </tr>
+                        <tr class="align-items-center">
+                            <td><a href="#">Inquiry Management</a></td>
+                        </tr>
+                        <tr class="align-items-center">
+                            <td><a href="#">Newsletter Management</a></td>
+                        </tr>
+                        <tr class="align-items-center">
+                            <td><a href="#">Content Management</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="col-xl-10 col-lg-9 col-md-9 col-sm-9 col-9 background-admin">
+                <div class="txt-btn">
+                    <p class="txt-service">Service Requests</p>
+                </div>
+                <button class="btn-export float-right"><img src="Assets/image/add.png">Add New User</button>
+                <div class="form-admin">
+                    <form class="form">
+                    <div class="row">
+                        <div class="col">
+                        
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Service ID">
+                            </div>
+                            </div>
+                        
+                        <div class="col">
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option value="userroll">customer</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col">
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option value="userroll">Service Provider</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col">
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option value="userroll">Status</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <input type="date" placeholder="start date">
+                        </div>
+                        <div class="col">
+                            <input type="date" placeholder="start date">
+                        </div>
+                
+                            <div class="btn-btn">
+                                <button type="submit" class=btn-search>search</button>
+                                </div>
+                                
+                                <button type="reset" class="btn-clear">Clear</button>
+
+                    </div>
+                    </form>
+
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-service table-hover">
+                        <thead>
+                            <tr>
+                                <th>Service ID <span><a href="#"><img src="Assets/image/sort.png"></a></span></th>
+                                <th >Service Date <span><a href="#"><img src="Assets/image/sort.png"></a></span></th>
+                                <th >Customer details<span><a href="#"><img src="Assets/image/sort.png"></a></span></th>
+                                <th >Service provider<span><a href="#"><img src="Assets/image/sort.png"></a></span></th>
+                                <th >status <span><a href="#"><img src="Assets/image/sort.png"></a></span></th>
+                                <th >Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>323436</td>
+                                <td>
+                                    <div><span><img src="Assets/image/calendar2.png"></span><b>09/04/2018</b></div>
+                                    <div><span><img src="Assets/image/time.png"></span>12:00 - 18:00</div>
+                                </td>
+                                <td>
+                                    <div>Daivid Bough</div>
+                                    <div><span><img src="Assets/image/home.png"></span>Musterstrabe 5,12345 Bonn</div>
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    <div class="orange-rectangle">New</div>
+                                </td>
+                                <td>
+                                    <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                   <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Refund</a>
+                                    <a class="dropdown-item">Escalate</a>
+                                    <a class="dropdown-item">History log</a>
+                                    <a class="dropdown-item">Download Invoice</a>
+                                  </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>323436</td>
+                                <td>
+                                    <div><span><img src="Assets/image/calendar2.png"></span><b>09/04/2018</b></div>
+                                    <div><span><img src="Assets/image/time.png"></span>12:00 - 18:00</div>
+                                </td>
+                                <td>
+                                    <div>Daivid Bough</div>
+                                    <div><span><img src="Assets/image/home.png"></span>Musterstrabe 5,12345 Bonn</div>
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    <div class="orange-rectangle">New</div>
+                                </td>
+                                <td>
+                                    <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                   <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Refund</a>
+                                    <a class="dropdown-item">Escalate</a>
+                                    <a class="dropdown-item">History log</a>
+                                    <a class="dropdown-item">Download Invoice</a>
+                                  </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>323436</td>
+                                <td>
+                                    <div><span><img src="Assets/image/calendar2.png"></span><b>09/04/2018</b></div>
+                                    <div><span><img src="Assets/image/time.png"></span>12:00 - 18:00</div>
+                                </td>
+                                <td>
+                                    <div>Daivid Bough</div>
+                                    <div><span><img src="Assets/image/home.png"></span>Musterstrabe 5,12345 Bonn</div>
+                                </td>
+                                <td>
+                                    <div><img src="Assets/image/cap.png" class="cap-img"> 
+                                        <span>Lyum Watson<br>
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star2.png"><span>4</span>
+                                        </span>
+                                    </div> 
+                                    
+                                </td>
+                                <td>
+                                    <div class="blue-rectangle">Pending</div>
+                                </td>
+                                <td>
+                                    <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                   <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Edit and Reshedule</a>
+                                    <a class="dropdown-item">Refund</a>
+                                    <a class="dropdown-item">cancel</a>
+                                    <a class="dropdown-item">Escalate</a>
+                                    <a class="dropdown-item">History log</a>
+                                    <a class="dropdown-item">Download Invoice</a>
+                                  </div>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>323436</td>
+                                <td>
+                                    <div><span><img src="Assets/image/calendar2.png"></span><b>09/04/2018</b></div>
+                                    <div><span><img src="Assets/image/time.png"></span>12:00 - 18:00</div>
+                                </td>
+                                <td>
+                                    <div>Daivid Bough</div>
+                                    <div><span><img src="Assets/image/home.png"></span>Musterstrabe 5,12345 Bonn</div>
+                                </td>
+                                <td>
+                                    <div><img src="Assets/image/cap.png" class="cap-img"> 
+                                        <span>Lyum Watson<br>
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star2.png"><span>4</span>
+                                        </span>
+                                    </div> 
+                                    
+                                </td>
+                                <td>
+                                    <div class="blue-rectangle">Pending</div>
+                                </td>
+                                <td>
+                                    <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                   <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Edit and Reshedule</a>
+                                    <a class="dropdown-item">Refund</a>
+                                    <a class="dropdown-item">cancel</a>
+                                    <a class="dropdown-item">Escalate</a>
+                                    <a class="dropdown-item">History log</a>
+                                    <a class="dropdown-item">Download Invoice</a>
+                                  </div>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>323436</td>
+                                <td>
+                                    <div><span><img src="Assets/image/calendar2.png"></span><b>09/04/2018</b></div>
+                                    <div><span><img src="Assets/image/time.png"></span>12:00 - 18:00</div>
+                                </td>
+                                <td>
+                                    <div>Daivid Bough</div>
+                                    <div><span><img src="Assets/image/home.png"></span>Musterstrabe 5,12345 Bonn</div>
+                                </td>
+                                <td>
+                                    <div><img src="Assets/image/cap.png" class="cap-img"> 
+                                        <span>Lyum Watson<br>
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star2.png"><span>4</span>
+                                        </span>
+                                    </div> 
+                                    
+                                </td>
+                                <td>
+                                    <div class="green-btn">Completed</div>
+                                </td>
+                                <td>
+                                    <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                   <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Refund</a>
+                                    <a class="dropdown-item">Escalate</a>
+                                    <a class="dropdown-item">History log</a>
+                                    <a class="dropdown-item">Download Invoice</a>
+                                  </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>323436</td>
+                                <td>
+                                    <div><span><img src="Assets/image/calendar2.png"></span><b>09/04/2018</b></div>
+                                    <div><span><img src="Assets/image/time.png"></span>12:00 - 18:00</div>
+                                </td>
+                                <td>
+                                    <div>Daivid Bough</div>
+                                    <div><span><img src="Assets/image/home.png"></span>Musterstrabe 5,12345 Bonn</div>
+                                </td>
+                                <td>
+                                    <div><img src="Assets/image/cap.png" class="cap-img"> 
+                                        <span>Lyum Watson<br>
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star2.png"><span>4</span>
+                                        </span>
+                                    </div> 
+                                    
+                                </td>
+                                <td>
+                                    <div class="green-btn">Completed</div>
+                                </td>
+                                <td>
+                                    <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                   <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Refund</a>
+                                    <a class="dropdown-item">Escalate</a>
+                                    <a class="dropdown-item">History log</a>
+                                    <a class="dropdown-item">Download Invoice</a>
+                                  </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>323436</td>
+                                <td>
+                                    <div><span><img src="Assets/image/calendar2.png"></span><b>09/04/2018</b></div>
+                                    <div><span><img src="Assets/image/time.png"></span>12:00 - 18:00</div>
+                                </td>
+                                <td>
+                                    <div>Daivid Bough</div>
+                                    <div><span><img src="Assets/image/home.png"></span>Musterstrabe 5,12345 Bonn</div>
+                                </td>
+                                <td>
+                                    <div><img src="Assets/image/cap.png" class="cap-img"> 
+                                        <span>Lyum Watson<br>
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star2.png"><span>4</span>
+                                        </span>
+                                    </div> 
+                                    
+                                </td>
+                                <td>
+                                    <div class="green-btn">Completed</div>
+                                </td>
+                                <td>
+                                    <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                   <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Refund</a>
+                                    <a class="dropdown-item">Escalate</a>
+                                    <a class="dropdown-item">History log</a>
+                                    <a class="dropdown-item">Download Invoice</a>
+                                  </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>323436</td>
+                                <td>
+                                    <div><span><img src="Assets/image/calendar2.png"></span><b>09/04/2018</b></div>
+                                    <div><span><img src="Assets/image/time.png"></span>12:00 - 18:00</div>
+                                </td>
+                                <td>
+                                    <div>Daivid Bough</div>
+                                    <div><span><img src="Assets/image/home.png"></span>Musterstrabe 5,12345 Bonn</div>
+                                </td>
+                                <td>
+                                    <div><img src="Assets/image/cap.png" class="cap-img"> 
+                                        <span>Lyum Watson<br>
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star2.png"><span>4</span>
+                                        </span>
+                                    </div> 
+                                    
+                                </td>
+                                <td>
+                                    <div class="green-btn">Completed</div>
+                                </td>
+                                <td>
+                                    <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                   <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Refund</a>
+                                    <a class="dropdown-item">Escalate</a>
+                                    <a class="dropdown-item">History log</a>
+                                    <a class="dropdown-item">Download Invoice</a>
+                                  </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>323436</td>
+                                <td>
+                                    <div><span><img src="Assets/image/calendar2.png"></span><b>09/04/2018</b></div>
+                                    <div><span><img src="Assets/image/time.png"></span>12:00 - 18:00</div>
+                                </td>
+                                <td>
+                                    <div>Daivid Bough</div>
+                                    <div><span><img src="Assets/image/home.png"></span>Musterstrabe 5,12345 Bonn</div>
+                                </td>
+                                <td>
+                                    <div><img src="Assets/image/cap.png" class="cap-img"> 
+                                        <span>Lyum Watson<br>
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star2.png"><span>4</span>
+                                        </span>
+                                    </div> 
+                                    
+                                </td>
+                                <td>
+                                    <div class="green-btn">Completed</div>
+                                </td>
+                                <td>
+                                    <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                   <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Refund</a>
+                                    <a class="dropdown-item">Escalate</a>
+                                    <a class="dropdown-item">History log</a>
+                                    <a class="dropdown-item">Download Invoice</a>
+                                  </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>323436</td>
+                                <td>
+                                    <div><span><img src="Assets/image/calendar2.png"></span><b>09/04/2018</b></div>
+                                    <div><span><img src="Assets/image/time.png"></span>12:00 - 18:00</div>
+                                </td>
+                                <td>
+                                    <div>Daivid Bough</div>
+                                    <div><span><img src="Assets/image/home.png"></span>Musterstrabe 5,12345 Bonn</div>
+                                </td>
+                                <td>
+                                    <div><img src="Assets/image/cap.png" class="cap-img"> 
+                                        <span>Lyum Watson<br>
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star1.png">
+                                            <img src="Assets/image/star2.png"><span>4</span>
+                                        </span>
+                                    </div> 
+                                    
+                                </td>
+                                <td>
+                                    <div class="green-btn">Completed</div>
+                                </td>
+                                <td>
+                                    <a href="#" id="dropdownmenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Assets/image/icons-more.png"></a>
+                                   <div class="dropdown-menu" aria-labelledby="dropdownmenu2">
+                                    <a class="dropdown-item">Refund</a>
+                                    <a class="dropdown-item">Escalate</a>
+                                    <a class="dropdown-item">History log</a>
+                                    <a class="dropdown-item">Download Invoice</a>
+                                  </div>
+                                </td>
+                            </tr>
+
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <h6 class="copyright">©2018 Helperland. All rights reserved.</h6>
+            
+
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>
+
+
