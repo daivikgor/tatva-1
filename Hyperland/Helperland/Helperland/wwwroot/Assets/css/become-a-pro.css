@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+body { font-family: 'Roboto', sans-serif;}
+h1, .h1 { font-size: 50px; font-weight: 500; color: #fff; line-height: 1.08; }
+h2, .h2 { font-size: 40px; font-weight: 700; color: #4F4F4F; line-height: 1.2; }
+h3, .h3 { font-size: 30px; font-weight: 700; color: #565656; line-height: 1.2; }
+p { font-size: 16px; font-weight: 400; color: #4F4F4F; line-height: 1.3; }
+
+.become-a-pro{
+    background: url("/Assets/image/become-a-pro-banner.png");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.trans{
+    background: transparent;
+}
+.helperland-logo{
+    margin-left: 10px;
+}
+.bar-btn{
+    color: white;
+    font-size: 28px;
+}
+.nav-link{
+    color: white;
+}
+.nav-item a:hover{
+    color: white;
+}
+.nav-item{
+    margin:0px 8px;
+}
+.Rounded-Rectangle{
+    border-radius: 25px;
+    border:1px solid #ffff;
+    padding: 3px 25px;
+}
+.Register{
+    margin-top:55px;
+}
+.register-form{
+    background: white;
+    align-items: center;
+    padding:15px 0 ;
+}
+.txt-register{
+    text-align: center;
+    font-family: ROboto-Bold;
+    font-size:24px;
+    color: #4f4f4f;
+}
+.txt-check{
+    font-size: 16px;
+    font-family: Roboto-Regular;
+}
+.btn-class{
+    text-align: center;
+}
+.btn-form{
+    background-color: #1D7A8C;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 8px 26px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Roboto-bold;
+    align-items: center;
+  }
+  .img-arrow{
+      margin-left: 8px;
+  }
+  .elipse-525{
+    position: absolute;
+    z-index: 1;
+  }
+  .shape-1{
+    z-index: 2;
+    margin: 11px;
+  }
+  .down-arrow{
+      display: flex;
+      justify-content: center;
+      margin-top:30px;
+      margin-bottom: 10px;
+  }
+  .works{
+      margin-top: 5px;
+  }
+  .how-works{
+      margin-top: 68px;
+  }
+
+  .txt-how-works{
+      font-family: Roboto-Bold;
+      font-size: 40px;
+      font-weight: bold;
+      color: #4F4F4F;
+      text-align: center;
+      margin-bottom: 70px;
+  }
+  .container1{
+      display:flex;
+      flex-direction: column;
+      gap:20px;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+ .row-1{
+     display:flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap:158px;
+ }
+ .row-2{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:158px;
+}
+ .txt-card{
+     display:flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap:16px;
+ } 
+ .register-yourself{
+     font-size: 30px;
+     font-weight: bold;
+     font-family: Roboto;
+     color: #4f4f4f;
+     text-align: left;
+ }
+ .read-more{
+     display: flex;
+     flex-wrap: wrap;
+     gap:4px;
+ }
+ .shape-read{
+     width: 29px;
+     height: 9px;
+     margin-bottom: 4px;
+ }
+ .provide{
+     font-size:18px;
+     font-family: Roboto;
+     font-weight: normal;
+     text-align: left;
+ }
+
+ .get-newsletter{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #353548;
+    margin-top: 55px;
+  }
+  .form1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 53px;
+  }
+  .email{
+    text-align: center;
+    width: 233px;
+    height: 40px;
+    border-radius: 20px;
+    border: solid 1px #565656;
+    background-color: #f4f5f8;
+    padding-left: 8px;
+  
+  }
+  .submit{
+    width: 88px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ff7b6d;
+  }
+  .footer{
+    background-color: black; padding-top: 10px;
+  }
+  .logo-footer{
+    display: flex;justify-content: center;align-items: center;
+  }
+  .img-footer{
+    width: 120px;height: 92px;
+  }
+  .footer-links-1{
+    text-align: center;display: flex;justify-content: center;align-items: center;
+  }
+  .footer-links{
+    word-spacing:15px;
+    color: white;
+  }
+  .footer-links a{
+    color: white;
+  }
+  .social-footer{
+    background-color: black;display: flex;justify-content: center;align-items: center;
+  }
+  
+  .footer-2{
+    text-align: center;display: flex;justify-content: center;align-items: center;color: #9ba0a3;
+  }
+  .footer-3{
+    text-align: center;display: flex;justify-content: center;align-items: center;color: #9ba0a3;
+  }
+  @media (max-width:1076px){
+      .remove{
+          display: none;
+      }
+     
+}
+@media (max-width:1076px){
+    .container1{gap: 40px;}
+    .row-1{gap: 10px;}
+    .row-2{gap:10px;}
+
+}
