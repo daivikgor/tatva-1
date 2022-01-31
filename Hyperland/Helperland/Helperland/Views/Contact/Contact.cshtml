@@ -1,9 +1,13 @@
 ﻿
-@{
+@model Helperland.ViewModel.ContactViewModel
+
+@{ 
     ViewData["Title"] = "Contact";
 }
 
 <!DOCTYPE html>
+
+
 <html lang="en">
 
 <head>
@@ -97,16 +101,16 @@
             <h2 class="txt-get-in">Get in touch with us</h2>
         </div>
         <div class="container">
-            <form>
+            <form enctype="multipart/form-data" asp-controller="Contact" asp-action="Contact" method="post">
                 <div class="row justify-content-center">
                     <div class="col-lg-3 col-sm-6 col">
                         <div class=form-group>
-                            <input type="text" class="form-control" id="fname" name="first name" placeholder="First name">
+                            <input type="text" class="form-control" required asp-for="FirstName"  id="fname"  placeholder="First name">
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col">
                         <div class=form-group>
-                            <input type="text" class="form-control" id="lname" name="last name" placeholder="Last name">
+                            <input type="text" class="form-control" required asp-for="LastName" id="lname"  placeholder="Last name">
                         </div>
                     </div>
                 </div>
@@ -116,19 +120,20 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">+44</span>
                             </div>
-                            <input type="tel" class="form-control" id="phone" name="mobile Number" placeholder="Mobile number">
+                            <input type="tel" class="form-control" required asp-for="PhoneNumber" id="phone"  placeholder="Mobile number">
+                            
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email"> 
+                            <input type="email" class="form-control" asp-for="Email" id="email"  placeholder="Email"> 
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-sm-12">
                         <div class="form-group">
-                            <select class="form-control">
+                            <select class="form-control" asp-for="Subject">
                                 <option value="" hidden>Subject</option>
                                 <option value="contact">contact</option>
                                 <option value="private">Private</option>
@@ -140,12 +145,12 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-sm-12">
                         <div class="form-group">
-                            <textarea class="form-control" id="msg" name="message" placeholder="Message" type="text" style="height: 140px;"></textarea>
+                            <textarea class="form-control" id="msg" asp-for="Message"  placeholder="Message" type="text" style="height: 140px;"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                   <button type="submit" class="btn-form">Submit</button>
+                   <button type="submit" class="btn-form" formmethod="post">Submit</button>
                </div>
 
             </form>
