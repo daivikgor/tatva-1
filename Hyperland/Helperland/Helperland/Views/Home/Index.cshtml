@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
 
-    <link rel="stylesheet" href="Assets/css/stylesheet.css">
+    <link rel="stylesheet" href="~/Assets/css/home.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" href="Assets/image/white-logo-transparent-background-copy-4.png" type="image/icon type">
   
@@ -19,139 +19,178 @@
 
 <body>
     <section class="section-10" style="background-image: url(Assets/image/group-35.png);">
-        
+
         <nav class="navbar navbar-expand-lg trans">
             <a href="@Url.Action("Index","Home")" class="navbar-logo">
-              <img src="Assets/image/white-logo-transparent-background.png" class="helperland-logo">
+                <img src="Assets/image/white-logo-transparent-background.png" class="helperland-logo">
             </a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
-              <i class="fas fa-bars bar-btn"></i>
+                <i class="fas fa-bars bar-btn"></i>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav ml-auto text-center">
-                <li class="nav-item Rounded-Rectangle">
-                  <a href="#" class="nav-link">
-                    Book a cleaner
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="@Url.Action("Prices","Home")" class="nav-link">
-                    Prices
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    Our Guarantee
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    Blog
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="@Url.Action("Contact","Contact")" class="nav-link">
-                    Contact us
-                  </a>
-                </li>
-                <li class="nav-item Rounded-Rectangle">
-                  <a href="" data-toggle="modal" data-target="#exampleModalCenter" class="nav-link">
-                    login
-                  </a>
-                </li>
-                <li class="nav-item Rounded-Rectangle">
-                  <a href="#" class="nav-link">
-                    Become a Helper
-                  </a>
-                </li>
-    
-              </ul>
-            </div>
-          </nav>
-          <!-- modal for login -->
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalCenterTitle">Log in</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                <form class="form-group">
-                    <div class="icon-text-box right">
-                    <input class="form-control" formcontrolname="email" id="email" type="email" placeholder="E-Mail" required>
-                    <!-- <img src="Assets/image/user-login.png"> -->
-                    </div>
-                    <div class="icon-text-box right">
-                        <input class="form-control" placeholder="password" name="password" type="password" required>
-                    </div>
-                    <div class="icon-text-box right-fl">
-                            <input class="form-check-input" type="checkbox" id="gridcheck">
-                            <label for="gridcheck" class="form-check-label txt-check">
-                              <p>save on computer</p>
-                            </label>   
-                    </div>
-                    <div style="text-align: center;">
-                    <button class="btn-login">log in</button></div>
-                </form>
-                <div style="text-align: center;">
-                  <div><a href="#">Forgot Password</a></div>
-                  <span>Don't have an account yet?</span>
-                  <div><a href="#">create Account</a></div>
-                </div>
-                </div>
-                <div class="modal-footer">
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item Rounded-Rectangle">
+                        <a href="#" class="nav-link">
+                            Book a cleaner
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("Prices","Home")" class="nav-link">
+                            Prices
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Our Guarantee
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("Contact","Contact")" class="nav-link">
+                            Contact us
+                        </a>
+                    </li>
+                    <li class="nav-item Rounded-Rectangle">
+                        <a href="" data-toggle="modal" data-target="#loginModal" class="nav-link">
+                            login
+                        </a>
+                    </li>
+                    <li class="nav-item Rounded-Rectangle">
+                        <a href="@Url.Action("BecomeHelper","becomehelper")" class="nav-link">
+                            Become a Helper
+                        </a>
+                    </li>
 
-          <!-- login over -->
+                </ul>
+            </div>
+        </nav>
+        <!-- modal for login -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document" style="max-width:370px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="loginModalTitle">Log in</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-group">
+                            <div class="icon-text-box right">
+                                <input class="form-control" formcontrolname="email" id="email" type="email" placeholder="E-Mail" required>
+                                <!-- <img src="Assets/image/user-login.png"> -->
+                            </div>
+                            <div class="icon-text-box right">
+                                <input class="form-control" placeholder="password" name="password" type="password" required>
+                            </div>
+                            <div class="icon-text-box right-fl">
+                                
+                                    <input type="checkbox">
+                                    <label>Save on computer</label>
+                                
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="btn-login">log in</button>
+                            </div>
+                        </form>
+                        <div style="text-align: center;">
+                            <div><a href="" data-toggle="modal" data-target="#forgotModel" data-dismiss="modal">Forgot Password</a></div>
+                            <span>Don't have an account yet?</span>
+                            <div><a href="@Url.Action("createuser","Createaccount")">create Account</a></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
 
-        
-        <div class="txt">Don't feel like doing housework ?</div>
-        <ul class="loreum">
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing</li>
-        </ul>
-                
-        <div class='Btn-book-a-cleaner'>
-        <a href="#"  class="Rounded-Rectangle-6-copy-5">
-            <span class="Lets-Book-a-Cleaner-copy">
-            Let’s Book a Cleaner
-          </span>
-        </a>
-        </div>
-        <div class="img-grp-holder">
-            <div class="forma-1-copy">
-            <img src="Assets/image/forma-1-copy.png" class="img-grp">
-            <span class="pass-txt forma-2-copy">Enter your postcode</span>
-            </div>
-            <img src="Assets/image/step-arrow-1.png" class="img-grp-1 remove">
-            <div class="forma-1-copy">
-            <img src="Assets/image/group-22.png" class="img-grp">
-            <span class="pass-txt">Select Your plan</span>
-            </div>
-            <img src="Assets/image/step-arrow-1-copy.png" class="img-grp-1 remove">
-            <div class="forma-1-copy">
-            <img src="Assets/image/forma-1-co.png" class="img-grp">
-            <span class="pass-txt">pay securely online</span>
-            </div>
-            <img src="Assets/image/step-arrow-1.png" class="img-grp-1 remove">
-            <div class="forma-1-copy">
-            <img src="Assets/image/forma-1.png" class="img-grp">
-            <span class="pass-txt">Enjoy amazing service</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="elipse-shape"> 
-            <img src="Assets/image/ellipse-525.png" class="elipse-525">
-            <img src="Assets/image/shape-1.png" class="shape-1">
-        </div>
-    </section>
+
+        <!-- login modal over -->
+        <!--Forget password Modal start-->
+        <div class="modal fade" id="forgotModel">
+            <div class="modal-dialog modal-dialog-centered" role="document" style="max-width:370px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="forgotModalTitle">Log in</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-group">
+                            <div class="icon-text-box right">
+                                <input class="form-control" formcontrolname="email" id="email" type="email" placeholder="E-Mail-Address" required>
+                                <!-- <img src="Assets/image/user-login.png"> -->
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="btn-login">Send</button>
+                            </div>
+                        </form>
+                        <div class="text-center">
+                            <a href="" type="button" data-toggle="modal" data-dismiss="modal" data-target="#loginModal">Login now</a>
+                        </div>
+                    </div>
+
+
+
+
+            </div>
+
+            </div>
+
+            </div>
+
+            <!-- forgot password modal over -->
+
+
+
+
+
+            <div class="txt mt-5" >Lorem ipsum dolor ?</div>
+            <ul class="loreum">
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing</li>
+            </ul>
+
+            <div class='Btn-book-a-cleaner'>
+                <a href="@Url.Action("BecomeHelper","becomehelper")" class="Rounded-Rectangle-6-copy-5">
+                    <span class="Lets-Book-a-Cleaner-copy">
+                        Let’s Book a Cleaner
+                    </span>
+                </a>
+            </div>
+            <div class="img-grp-holder">
+                <div class="forma-1-copy">
+                    <img src="Assets/image/forma-1-copy.png" class="img-grp">
+                    <span class="pass-txt forma-2-copy">Enter your postcode</span>
+                </div>
+                <img src="Assets/image/step-arrow-1.png" class="img-grp-1 remove">
+                <div class="forma-1-copy">
+                    <img src="Assets/image/group-22.png" class="img-grp">
+                    <span class="pass-txt">Select Your plan</span>
+                </div>
+                <img src="Assets/image/step-arrow-1-copy.png" class="img-grp-1 remove">
+                <div class="forma-1-copy">
+                    <img src="Assets/image/forma-1-co.png" class="img-grp">
+                    <span class="pass-txt">pay securely online</span>
+                </div>
+                <img src="Assets/image/step-arrow-1.png" class="img-grp-1 remove">
+                <div class="forma-1-copy">
+                    <img src="Assets/image/forma-1.png" class="img-grp">
+                    <span class="pass-txt">Enjoy amazing service</span>
+                </div>
+            </div>
+            <div class="elipse-shape">
+                <img src="Assets/image/ellipse-525.png" class="elipse-525">
+                <img src="Assets/image/shape-1.png" class="shape-1">
+            </div>
+</section>
     <div class="section-2">
     
         <h2 class="why-hyperland">Why Helperland</h2>
@@ -204,9 +243,9 @@
         
         </div>
 
-        <div class="blog">
-            <h2>Our Blog</h2>
-        </div>
+        
+            <h2 class="blog">Our Blog</h2>
+        
 
         <div class="container-blog">
             <div class=card-blog>

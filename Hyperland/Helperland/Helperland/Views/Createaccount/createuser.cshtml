@@ -1,8 +1,6 @@
 ﻿
-@model Helperland.ViewModel.ContactViewModel
-
 @{
-    ViewData["Title"] = "Contact";
+    ViewData["Title"] = "createuser";
 }
 
 <!DOCTYPE html>
@@ -13,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT</title>
+    <title>Create Account</title>
     <link rel="stylesheet" href="~/Assets/css/contactus.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" href="~/Assets/image/white-logo-transparent-background-copy-4.png" type="image/icon type">
@@ -70,140 +68,105 @@
     </nav>
 
     <section class="contact-section">
-        <img src="~/Assets/image/group-16.png" class="contact-banner">
         <div class="container">
-            <h1 class="txt-contact">Contact us</h1>
+            <h1 class="txt-contact">Create Account</h1>
             <div class="diamond">
                 <hr class=diam-break-left>
                 <img src="~/Assets/image/forma-1-copy-5.png" class="img-diamond">
                 <hr class="diam-break-right">
             </div>
-
-            <div class="add-fon">
-                <div class="address">
-                    <img src="~/Assets/image/location.png" class="img-add">
-                    <h3 class="txt-add">1111 Lorem ipsum text 100,<br>Lorem ipsum AB</h3>
-                </div>
-                <div class="address">
-                    <img src="~/Assets/image/phone-call.png" class="img-add">
-                    <h3 class="txt-add">+49 (40) 123 56 7890<br>+49 (40) 123 56 0000</h3>
-                </div>
-                <div class="address">
-                    <img src="~/Assets/image/mail.png" class="img-add">
-                    <h3 class="txt-add">info@helperland.com</h3>
-                </div>
-            </div>
         </div>
     </section>
 
-    <section class="form-section">
-        <div>
-            <h2 class="txt-get-in">Get in touch with us</h2>
-        </div>
-        @if (ViewBag.flag)
-        {
-            <div class="alert alert-success alert-dismissible fade show justify-content-center" role="alert">
-                <strong>Your query has been submitted successfully</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        }
-        <div class="container">
-            <form enctype="multipart/form-data" asp-controller="Contact" asp-action="Contact" method="post">
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 col-sm-6 col">
-                        <div class=form-group>
-                            <input type="text" class="form-control" required asp-for="FirstName" id="fname" placeholder="First name">
+    <section>
+        <form method="post" class="form-section">
+            <div class="container">
+                <div class="row justify-content-center ">
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="form-group">
+                            <input class="form-control" type="text" id="fname" placeholder="First Name">
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6 col">
-                        <div class=form-group>
-                            <input type="text" class="form-control" required asp-for="LastName" id="lname" placeholder="Last name">
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="form-group">
+                            <input class="form-control" type="text" id="lname" placeholder="Last Name">
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">+44</span>
+
+                <div class="row justify-content-center ">
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="form-group">
+                            <input class="form-control" type="email" id="email" placeholder="Email address">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">+49</div>
+                                </div>
+                                <input class="form-control" type="tel" id="MobileNo" placeholder="Phone Number">
                             </div>
-                            <input type="tel" class="form-control" required asp-for="PhoneNumber" id="phone" placeholder="Mobile number">
-
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
+                </div>
+
+                <div class="row justify-content-center ">
+                    <div class="col-lg-4 col-sm-6 col-12">
                         <div class="form-group">
-                            <input type="email" class="form-control" asp-for="Email" id="email" placeholder="Email">
+                            <input class="form-control" type="password" id="password" placeholder="Password">
                         </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="form-group">
+                            <input class="form-control" type="password" id="confirm_pswd" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-12 col-12 form-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="form-check-inline" required style="height:auto;">
+                            <span class="terms">Yes, I would like to subscribe to the newsletter of Helperland GmbH with vouchers, trends, promotions and individualized offers. I can unsubscribe from the newsletter at any time in the newsletter and in the customer account itself.</span>
+                        </label>
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="form-group">
-                            <select class="form-control" asp-for="Subject">
-                                <option value="" hidden>Subject</option>
-                                <option value="contact">contact</option>
-                                <option value="private">Private</option>
-                                <option value="FAQ">FAQ</option>
-                            </select>
-                        </div>
+                    <div class="col-lg-6 col-md-12 col-12 form-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="form-check-inline" required style="height:auto;">
+                            <span class="terms">I agree with the <a href="">terms and conditions</a> of Helperland GmbH.</span>
+                        </label>
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="form-group">
-                            <textarea class="form-control" id="msg" asp-for="Message" placeholder="Message" type="text" style="height: 140px;"></textarea>
-                        </div>
+                    <div class="col-lg-6 col-md-12 col-12 form-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="form-check-inline" required style="height: auto;">
+                            <span class="terms">I have read the <a href="">privacy policy</a> .</span>
+                        </label>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <button type="submit" class="btn-form" formmethod="post">Submit</button>
+
+
+                <div class="text-center">
+                    <div class="row justify-content-center">
+                        <button type="submit" value="Submit" class="btn-form" formmethod="post">Register</button>
+                    </div>
                 </div>
-
-            </form>
-        </div>
-
+                <div class="text-center mt-3 mb-5">
+                    Already registrered?  <a href="">Login now</a>
+                </div>
+            </div>
+        </form>
     </section>
-    <section class="map-section">
-        <div class="mapouter">
-            <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=936&amp;height=286&amp;hl=en&amp;q=nail-salon&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.fridaynightfunkin.net/friday-night-funkin-mods-fnf-play-online/">FNF Mods</a></div>
-            <style>
-                .mapouter {
-                    position: relative;
-                    text-align: right;
-                    width: 100%;
-                    height: 286px;
-                }
-
-                .gmap_canvas {
-                    overflow: hidden;
-                    background: none !important;
-                    width: 100%;
-                    height: 286px;
-                }
-
-                .gmap_iframe {
-                    height: 286px !important;
-                }
-            </style>
-        </div>
-    </section>
-
-    <div class="get-newsletter">
-        <p>GET OUR NEWSLETTER</p>
-    </div>
-    <div class="form1">
-
-        <input type="email" id="email" placeholder="Your Email" class="email">
-        <button class="submit">submit </button>
-    </div>
-
     <div class="container-fluid footer">
         <div class="row">
             <div class="col-sm-3 logo-footer">
-                <a href="@Url.Action("Index","Home")"><img src="~/Assets/image/white-logo-transparent-background.png" class="img-footer"></a>
+                <a href=#><img src="~/Assets/image/white-logo-transparent-background.png" class="img-footer"></a>
             </div>
             <div class="col-sm-6 footer-links-1">
                 <p class="footer-links">
@@ -233,13 +196,15 @@
     </div>
     </div>
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/3960232895.js"></script>
-
 </body>
-
 </html>
+
+
+
+ 
+
 

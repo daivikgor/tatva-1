@@ -16,15 +16,15 @@ namespace Helperland.Controllers
         }
 
  
-        public IActionResult Contact()
+        public IActionResult Contact(bool flag=false)
         {
+            ViewBag.Flag = flag;
             return View();
         }
         
         [HttpPost]
         public IActionResult Contact(ContactViewModel model)
         {
-
             ContactU newContact = new ContactU
             {
                 Name = @model.FirstName + model.LastName,
@@ -38,7 +38,7 @@ namespace Helperland.Controllers
             _HelperlandContext.SaveChanges();
 
 
-            return RedirectToAction("Contact");
+            return RedirectToAction("Contact",new { flag = true });
 
         }
     }
