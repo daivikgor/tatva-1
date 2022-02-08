@@ -1,71 +1,9 @@
-﻿
+﻿@model Helperland.ViewModel.createviewmodel
 @{
     ViewData["Title"] = "createuser";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
-
-<!DOCTYPE html>
-
-
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Account</title>
-    <link rel="stylesheet" href="~/Assets/css/contactus.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="icon" href="~/Assets/image/white-logo-transparent-background-copy-4.png" type="image/icon type">
-
-</head>
-<body>
-    <nav class="navbar navbar-expand-md fixed-top" style="background-color: #525252;min-height: 54px;">
-        <a href="@Url.Action("Index","Home")" class="navbar-brand"><img src="~/Assets/image/white-logo-transparent-background.png" style="width: 73px;height: 54px;"></a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon">
-                <i class="fas fa-bars" style="color: white;font-size: 28px;"></i>
-            </span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto text-center">
-                <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
-                    <a href="#" class="nav-link">
-                        Book Now
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="@Url.Action("Prices","Home")" class="nav-link Rounded-Rectangle">
-                        Prices & Services
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        Warranty
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        Blog
-                    </a>
-                </li>
-                <li class="@Url.Action("Contact","Contact")">
-                    <a href="#" class="nav-link">
-                        Contact
-                    </a>
-                </li>
-                <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
-                    <a href="#" class="nav-link">
-                        Login
-                    </a>
-                </li>
-                <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
-                    <a href="#" class="nav-link">
-                        Become a Helper
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<head><link rel="stylesheet" href="~/Assets/css/contactus.css"></head>
 
     <section class="contact-section">
         <div class="container">
@@ -79,17 +17,20 @@
     </section>
 
     <section>
-        <form method="post" class="form-section">
+        <form enctype="multipart/form-data" asp-controller="Createaccount" asp-action="createuser" method="post">
             <div class="container">
                 <div class="row justify-content-center ">
                     <div class="col-lg-4 col-sm-6 col-12">
                         <div class="form-group">
-                            <input class="form-control" type="text" id="fname" placeholder="First Name">
+                            <input class="form-control" type="text" asp-for="FirstName" id="fname" placeholder="First Name">
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
                         </div>
+
                     </div>
                     <div class="col-lg-4 col-sm-6 col-12">
                         <div class="form-group">
-                            <input class="form-control" type="text" id="lname" placeholder="Last Name">
+                            <input class="form-control" type="text" asp-for="LastName" id="lname" placeholder="Last Name">
+                            <span asp-validation-for="LastName" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
@@ -97,7 +38,11 @@
                 <div class="row justify-content-center ">
                     <div class="col-lg-4 col-sm-6 col-12">
                         <div class="form-group">
-                            <input class="form-control" type="email" id="email" placeholder="Email address">
+                            <input class="form-control" type="email" asp-for="Email" id="email" placeholder="Email address" data-val="true"
+                                   data-val-required="The Email field is required.">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            @Html.ValidationMessage("EmailExist", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-12">
@@ -106,8 +51,10 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">+49</div>
                                 </div>
-                                <input class="form-control" type="tel" id="MobileNo" placeholder="Phone Number">
+                                <input class="form-control" type="tel" asp-for="Mobile" id="MobileNo" placeholder="Phone Number">
+
                             </div>
+                            <span asp-validation-for="Mobile" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
@@ -115,38 +62,33 @@
                 <div class="row justify-content-center ">
                     <div class="col-lg-4 col-sm-6 col-12">
                         <div class="form-group">
-                            <input class="form-control" type="password" id="password" placeholder="Password">
+                            <input class="form-control" type="password" asp-for="Password" id="password" placeholder="Password">
+                            <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-12">
                         <div class="form-group">
-                            <input class="form-control" type="password" id="confirm_pswd" placeholder="Confirm Password">
+                            <input class="form-control" type="password" asp-for="Confirmpassword" id="confirm_pswd" placeholder="Confirm Password">
+                            <span asp-validation-for="Confirmpassword" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
 
-
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-12 col-12 form-group">
                         <label class="checkbox-inline">
-                            <input type="checkbox" class="form-check-inline" required style="height:auto;">
-                            <span class="terms">Yes, I would like to subscribe to the newsletter of Helperland GmbH with vouchers, trends, promotions and individualized offers. I can unsubscribe from the newsletter at any time in the newsletter and in the customer account itself.</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 col-md-12 col-12 form-group">
-                        <label class="checkbox-inline">
-                            <input type="checkbox" class="form-check-inline" required style="height:auto;">
+                            <input type="checkbox" asp-for="Ischecked" class="form-check-inline" style="height:auto;">
                             <span class="terms">I agree with the <a href="">terms and conditions</a> of Helperland GmbH.</span>
+                            <span asp-validation-for="Ischecked" class="text-danger"></span>
                         </label>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-12 col-12 form-group">
                         <label class="checkbox-inline">
-                            <input type="checkbox" class="form-check-inline" required style="height: auto;">
+                            <input type="checkbox" asp-for="Ischecked" class="form-check-inline" required style="height: auto;">
                             <span class="terms">I have read the <a href="">privacy policy</a> .</span>
+                            <span asp-validation-for="Ischecked" class="text-danger"></span>
                         </label>
                     </div>
                 </div>
@@ -161,47 +103,10 @@
                     Already registrered?  <a href="">Login now</a>
                 </div>
             </div>
+            
         </form>
     </section>
-    <div class="container-fluid footer">
-        <div class="row">
-            <div class="col-sm-3 logo-footer">
-                <a href=#><img src="~/Assets/image/white-logo-transparent-background.png" class="img-footer"></a>
-            </div>
-            <div class="col-sm-6 footer-links-1">
-                <p class="footer-links">
-                    <a href="@Url.Action("Index","Home")">HOME</a>
-                    <a href="@Url.Action("About","Home")">ABOUT</a>
-                    <a href="#">TESTIMONIALS</a>
-                    <a href="@Url.Action("Faq","Home")">FAQS</a>
-                    <a href="#">INSURANCE</a>
-                    <a href="#">POLICY</a>
-                    <a href="#">IMPRESSUM</a>
-                </p>
-            </div>
-            <div class="col-sm-3 social-footer">
-
-                <a href=#><img src="~/Assets/image/facebook.png" style="padding-right: 15px;"></a>
-                <a href=#><img src="~/Assets/image/insta.png"></a>
-            </div>
-        </div>
-        <div class="footer-2">
-            <hr style="border: #424242 1px solid;text-align: center;width: 1150px;">
-        </div>
-
-        <div class="footer-3">
-            <p>©2018 Helperland. All rights reserved. <a href=# style="color: #9ba0a3;">Terms and Conditions</a> | <a href=# style="color: #9ba0a3;">Privacy Policy</a></p>
-        </div>
-    </div>
-    </div>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/3960232895.js"></script>
-</body>
-</html>
+    
 
 
 

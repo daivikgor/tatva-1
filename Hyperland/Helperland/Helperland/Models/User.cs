@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
 
 namespace Helperland.Models
 {
-    public partial class User
+    public partial class User 
     {
         public User()
         {

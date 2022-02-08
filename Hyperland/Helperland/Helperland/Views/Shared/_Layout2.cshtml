@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewData["Title"] = "_Layout2";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prices</title>
+    <link rel="stylesheet" href="~/Assets/css/layout.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="~/Assets/image/white-logo-transparent-background-copy-4.png" type="image/icon type">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md fixed-top" style="background-color: #525252;min-height: 54px;">
+        <a href="@Url.Action("Index","Home")" class="navbar-brand"><img src="~/Assets/image/white-logo-transparent-background.png" style="width: 73px;height: 54px;"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon">
+                <i class="fas fa-bars" style="color: white;font-size: 28px;"></i>
+            </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
+                    <a href="#" class="nav-link">
+                        Book Now
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Prices","Home")" class="nav-link Rounded-Rectangle">
+                        Prices & Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        Warranty
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        Blog
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Contact","Contact")" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+                <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
+                    <a href="#" class="nav-link">
+                        Login
+                    </a>
+                </li>
+                <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
+                    <a href="@Url.Action("BecomeHelper","becomehelper")" class="nav-link">
+                        Become a Helper
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+   
+
+
+
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="col-sm-3 logo-footer">
+                <a href=#><img src="~/Assets/image/white-logo-transparent-background.png" class="img-footer"></a>
+            </div>
+            <div class="col-sm-6 footer-links-1">
+                <p class="footer-links">
+                    <a href="@Url.Action("Index","Home")">HOME</a>
+                    <a href="@Url.Action("About","Home")">ABOUT</a>
+                    <a href="#">TESTIMONIALS</a>
+                    <a href="@Url.Action("Faq","Home")">FAQS</a>
+                    <a href="#">INSURANCE</a>
+                    <a href="#">POLICY</a>
+                    <a href="#">IMPRESSUM</a>
+                </p>
+            </div>
+            <div class="col-sm-3 social-footer">
+
+                <a href=#><img src="~/Assets/image/facebook.png" style="padding-right: 15px;"></a>
+                <a href=#><img src="~/Assets/image/insta.png"></a>
+            </div>
+        </div>
+        <div class="footer-2">
+            <hr style="border: #424242 1px solid;text-align: center;width: 1150px;">
+        </div>
+
+        <div class="footer-3">
+            <p>©2018 Helperland. All rights reserved. <a href=# style="color: #9ba0a3;">Terms and Conditions</a> | <a href=# style="color: #9ba0a3;">Privacy Policy</a></p>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/3960232895.js"></script>
+
+</body>
+</html>
+

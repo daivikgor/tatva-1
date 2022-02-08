@@ -1,48 +1,291 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Helperland</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Helperland</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+﻿@model Helperland.ViewModel.createviewmodel
+
+@using Microsoft.AspNetCore.Http
+    
+ 
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewData["Title"] | HelperLand</title>
+
+        <link rel="stylesheet" href="~/Assets/css/home.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="icon" href="~/Assets/image/white-logo-transparent-background-copy-4.png" type="image/icon type">
+    </head>
+
+    <body>
+        <section class="section-10">
+
+            <nav class="navbar navbar-expand-lg trans">
+                <a href="@Url.Action("Index","Home")" class="navbar-logo">
+                    <img src="~/Assets/image/white-logo-transparent-background.png" class="helperland-logo">
+                </a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <i class="fas fa-bars bar-btn"></i>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ml-auto text-center">
+
+
+                        @if (Context.Session.GetString("username") == null)
+                        {
+
+
+
+                            <li class="nav-item Rounded-Rectangle">
+                                <a href="#" class="nav-link">
+                                    Book a cleaner
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("Prices","Home")" class="nav-link">
+                                    Prices
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Our Guarantee
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("Contact","Contact")" class="nav-link">
+                                    Contact us
+                                </a>
+                            </li>
+                            <li class="nav-item Rounded-Rectangle">
+                                <a href="" data-toggle="modal" data-target="#loginModal" class="nav-link">
+                                    login
+                                </a>
+                            </li>
+                            <li class="nav-item Rounded-Rectangle">
+                                <a href="@Url.Action("BecomeHelper","becomehelper")" class="nav-link">
+                                    Become a Helper
+                                </a>
+                            </li>
+                        }
+                        @if (Context.Session.GetString("username") != null)
+                        {
+                            <li class="nav-item Rounded-Rectangle">
+                                <a href="#" class="nav-link ">
+                                    Book a Cleaner
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("Price", "Home")" class="nav-link ">
+                                    Prices
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    Our Guarantee
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("Contact", "Contact")" class="nav-link">
+                                    Contact us
+                                </a>
+                            </li>
+
+                            <li class="nav-item afterLogin">
+                                <a href="#" class="nav-link">
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item afterLogin">
+                                <a href="#" class="nav-link">
+                                    My Setting
+                                </a>
+                            </li>
+                            <li class="nav-item afterLogin">
+                                <a href="@Url.Action("logout", "Home")" class="nav-link">
+                                    Logout
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item remove">
+                                <a href="" class="nav-link" type="button">
+                                    <div>
+                                        <img src="~/Assets/image/icon-notification.png">
+                                    </div>
+
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item dropdown remove-to">
+                                <a href="#" type="button " class="nav-link dropdown-toggle" data-toggle="dropdown">
+
+                                    <img src="~/Assets/image/user.png">
+                                    <img src="~/Assets/image/keyboard-right-arrow-button.png" style="animation:none" onclick="transformArrow(this)">
+
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-item-text">
+                                            Welcome @Context.Session.GetString("username")
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Dashboard </a>
+                                        <a class="dropdown-item" href="#">My Setting</a>
+                                        <a class="dropdown-item" href="@Url.Action("logout","home")">Logout</a>
+                                    </div>
+                                </a>
+                            </li>
+                        }
+
+
                     </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+            </nav>
+            }
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Helperland - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
-</body>
+            <!-- modal for login -->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document" style="max-width:370px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="loginModalTitle">Log in</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-group" asp-controller="Account" asp-action="login" method="post">
+                                <div class="icon-text-box right">
+                                    <input class="form-control" asp-for="Email" id="email" type="email" placeholder="E-Mail" required>
+                                    <!-- <img src="Assets/image/user-login.png"> -->
+                                </div>
+                                <div class="icon-text-box right">
+                                    <input class="form-control" placeholder="password" asp-for="Password" type="password" required>
+                                </div>
+
+                                <div class="icon-text-box right-fl">
+                                    <input type="checkbox">
+                                    <label>Save on computer</label>
+                                </div>
+
+                                <div style="text-align: center;">
+                                    <button class="btn-login">log in</button>
+                                </div>
+                            </form>
+                            <div style="text-align: center;">
+                                <div><a href="" data-toggle="modal" data-target="#forgotModel" data-dismiss="modal">Forgot Password</a></div>
+                                <span>Don't have an account yet?</span>
+                                <div><a href="@Url.Action("createuser","Createaccount")">create Account</a></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- login modal over -->
+
+            <!--Forget password Modal start-->
+
+            <div class="modal fade" id="forgotModel">
+                <div class="modal-dialog modal-dialog-centered" role="document" style="max-width:370px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="forgotModalTitle">Forgot Password</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-group" asp-controller="Account" asp-action="ForgotPassword" method="post">
+                                <div class="icon-text-box right">
+                                    <input class="form-control" asp-for="Email"  id="email" type="email" placeholder="E-Mail-Address" >
+                                    <!-- <img src="Assets/image/user-login.png"> -->
+                                </div>
+                                <div style="text-align: center;">
+                                    <button class="btn-login">Send</button>
+                                </div>
+                            </form>
+                            <div class="text-center">
+                                <a href="" type="button" data-toggle="modal" data-dismiss="modal" data-target="#loginModal">Login now</a>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- forgot password modal over -->
+
+
+            @RenderBody()
+
+            <div class="get-newsletter">
+                <p>GET OUR NEWSLETTER</p>
+            </div>
+            <div class="form1">
+
+                <input type="email" id="email" placeholder="Your Email" class="email">
+                <button class="submit">
+                    submit
+                </button>
+                <div class="up-aero">
+                    <img src="~/Assets/image/up-aero.png" style="margin-left: 14px; margin-top: 18px;">
+                </div>
+            </div>
+
+            <div class="container-fluid footer">
+                <div class="row">
+                    <div class="col-sm-3 logo-footer">
+                        <a href="@Url.Action("Index","Home")"><img src="~/Assets/image/white-logo-transparent-background.png" class="img-footer"></a>
+                    </div>
+                    <div class="col-sm-6 footer-links-1">
+                        <p class="footer-links">
+                            <a href="@Url.Action("Index","Home")">HOME</a>
+                            <a href="@Url.Action("About","Home")">ABOUT</a>
+                            <a href="#">TESTIMONIALS</a>
+                            <a href="@Url.Action("Faq","Home")">FAQS</a>
+                            <a href="#">INSURANCE</a>
+                            <a href="#">POLICY</a>
+                            <a href="#">IMPRESSUM</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-3 social-footer">
+
+                        <a href=#><img src="~/Assets/image/facebook.png" style="padding-right: 15px;"></a>
+                        <a href=#><img src="~/Assets/image/insta.png"></a>
+                    </div>
+                </div>
+
+                <div class="footer-3">
+                    <p>©2018 Helperland. All rights reserved. <a href=# style="color: #9ba0a3;">Terms and Conditions</a> | <a href=# style="color: #9ba0a3;">Privacy Policy</a></p>
+                    <button class="btn-ok">OK</button>
+                </div>
+
+
+            </div>
+            </div>
+            </div>
+            @RenderSection("Scripts", required: false)
+
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/3960232895.js"></script>
+
 </html>
+
+

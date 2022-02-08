@@ -155,3 +155,13 @@ F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\bin\Debug\netcore
 F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\obj\Debug\netcoreapp3.1\Razor\Views\Createaccount\createuser.cshtml.g.cs
 F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\obj\Debug\netcoreapp3.1\Razor\Views\becomehelper\BecomeHelper.cshtml.g.cs
+F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout2.cshtml.g.cs
+F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\bin\Debug\netcoreapp3.1\MailKit.dll
+F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\bin\Debug\netcoreapp3.1\MimeKit.dll
+F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs

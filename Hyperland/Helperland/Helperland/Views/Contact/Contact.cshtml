@@ -3,243 +3,148 @@
 
 @{
     ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
-
-<!DOCTYPE html>
-
-
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT</title>
     <link rel="stylesheet" href="~/Assets/css/contactus.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="icon" href="~/Assets/image/white-logo-transparent-background-copy-4.png" type="image/icon type">
-
 </head>
-<body>
-    <nav class="navbar navbar-expand-md fixed-top" style="background-color: #525252;min-height: 54px;">
-        <a href="@Url.Action("Index","Home")" class="navbar-brand"><img src="~/Assets/image/white-logo-transparent-background.png" style="width: 73px;height: 54px;"></a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon">
-                <i class="fas fa-bars" style="color: white;font-size: 28px;"></i>
-            </span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto text-center">
-                <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
-                    <a href="#" class="nav-link">
-                        Book Now
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="@Url.Action("Prices","Home")" class="nav-link Rounded-Rectangle">
-                        Prices & Services
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        Warranty
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        Blog
-                    </a>
-                </li>
-                <li class="@Url.Action("Contact","Contact")">
-                    <a href="#" class="nav-link">
-                        Contact
-                    </a>
-                </li>
-                <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
-                    <a href="#" class="nav-link">
-                        Login
-                    </a>
-                </li>
-                <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
-                    <a href="#" class="nav-link">
-                        Become a Helper
-                    </a>
-                </li>
-            </ul>
+<section class="contact-section">
+    <img src="~/Assets/image/group-16.png" class="contact-banner">
+    <div class="container">
+        <h1 class="txt-contact">Contact us</h1>
+        <div class="diamond">
+            <hr class=diam-break-left>
+            <img src="~/Assets/image/forma-1-copy-5.png" class="img-diamond">
+            <hr class="diam-break-right">
         </div>
-    </nav>
 
-    <section class="contact-section">
-        <img src="~/Assets/image/group-16.png" class="contact-banner">
-        <div class="container">
-            <h1 class="txt-contact">Contact us</h1>
-            <div class="diamond">
-                <hr class=diam-break-left>
-                <img src="~/Assets/image/forma-1-copy-5.png" class="img-diamond">
-                <hr class="diam-break-right">
+        <div class="add-fon">
+            <div class="address">
+                <img src="~/Assets/image/location.png" class="img-add">
+                <h3 class="txt-add">1111 Lorem ipsum text 100,<br>Lorem ipsum AB</h3>
             </div>
-
-            <div class="add-fon">
-                <div class="address">
-                    <img src="~/Assets/image/location.png" class="img-add">
-                    <h3 class="txt-add">1111 Lorem ipsum text 100,<br>Lorem ipsum AB</h3>
-                </div>
-                <div class="address">
-                    <img src="~/Assets/image/phone-call.png" class="img-add">
-                    <h3 class="txt-add">+49 (40) 123 56 7890<br>+49 (40) 123 56 0000</h3>
-                </div>
-                <div class="address">
-                    <img src="~/Assets/image/mail.png" class="img-add">
-                    <h3 class="txt-add">info@helperland.com</h3>
-                </div>
+            <div class="address">
+                <img src="~/Assets/image/phone-call.png" class="img-add">
+                <h3 class="txt-add">+49 (40) 123 56 7890<br>+49 (40) 123 56 0000</h3>
             </div>
-        </div>
-    </section>
-
-    <section class="form-section">
-        <div>
-            <h2 class="txt-get-in">Get in touch with us</h2>
-        </div>
-        @if (ViewBag.flag)
-        {
-            <div class="alert alert-success alert-dismissible fade show justify-content-center" role="alert">
-                <strong>Your query has been submitted successfully</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+            <div class="address">
+                <img src="~/Assets/image/mail.png" class="img-add">
+                <h3 class="txt-add">info@helperland.com</h3>
             </div>
-        }
-        <div class="container">
-            <form enctype="multipart/form-data" asp-controller="Contact" asp-action="Contact" method="post">
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 col-sm-6 col">
-                        <div class=form-group>
-                            <input type="text" class="form-control" required asp-for="FirstName" id="fname" placeholder="First name">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col">
-                        <div class=form-group>
-                            <input type="text" class="form-control" required asp-for="LastName" id="lname" placeholder="Last name">
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">+44</span>
-                            </div>
-                            <input type="tel" class="form-control" required asp-for="PhoneNumber" id="phone" placeholder="Mobile number">
-
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="form-group">
-                            <input type="email" class="form-control" asp-for="Email" id="email" placeholder="Email">
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="form-group">
-                            <select class="form-control" asp-for="Subject">
-                                <option value="" hidden>Subject</option>
-                                <option value="contact">contact</option>
-                                <option value="private">Private</option>
-                                <option value="FAQ">FAQ</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="form-group">
-                            <textarea class="form-control" id="msg" asp-for="Message" placeholder="Message" type="text" style="height: 140px;"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <button type="submit" class="btn-form" formmethod="post">Submit</button>
-                </div>
-
-            </form>
-        </div>
-
-    </section>
-    <section class="map-section">
-        <div class="mapouter">
-            <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=936&amp;height=286&amp;hl=en&amp;q=nail-salon&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.fridaynightfunkin.net/friday-night-funkin-mods-fnf-play-online/">FNF Mods</a></div>
-            <style>
-                .mapouter {
-                    position: relative;
-                    text-align: right;
-                    width: 100%;
-                    height: 286px;
-                }
-
-                .gmap_canvas {
-                    overflow: hidden;
-                    background: none !important;
-                    width: 100%;
-                    height: 286px;
-                }
-
-                .gmap_iframe {
-                    height: 286px !important;
-                }
-            </style>
-        </div>
-    </section>
-
-    <div class="get-newsletter">
-        <p>GET OUR NEWSLETTER</p>
-    </div>
-    <div class="form1">
-
-        <input type="email" id="email" placeholder="Your Email" class="email">
-        <button class="submit">submit </button>
-    </div>
-
-    <div class="container-fluid footer">
-        <div class="row">
-            <div class="col-sm-3 logo-footer">
-                <a href="@Url.Action("Index","Home")"><img src="~/Assets/image/white-logo-transparent-background.png" class="img-footer"></a>
-            </div>
-            <div class="col-sm-6 footer-links-1">
-                <p class="footer-links">
-                    <a href="@Url.Action("Index","Home")">HOME</a>
-                    <a href="@Url.Action("About","Home")">ABOUT</a>
-                    <a href="#">TESTIMONIALS</a>
-                    <a href="@Url.Action("Faq","Home")">FAQS</a>
-                    <a href="#">INSURANCE</a>
-                    <a href="#">POLICY</a>
-                    <a href="#">IMPRESSUM</a>
-                </p>
-            </div>
-            <div class="col-sm-3 social-footer">
-
-                <a href=#><img src="~/Assets/image/facebook.png" style="padding-right: 15px;"></a>
-                <a href=#><img src="~/Assets/image/insta.png"></a>
-            </div>
-        </div>
-        <div class="footer-2">
-            <hr style="border: #424242 1px solid;text-align: center;width: 1150px;">
-        </div>
-
-        <div class="footer-3">
-            <p>©2018 Helperland. All rights reserved. <a href=# style="color: #9ba0a3;">Terms and Conditions</a> | <a href=# style="color: #9ba0a3;">Privacy Policy</a></p>
         </div>
     </div>
+</section>
+
+<section class="form-section">
+    <div>
+        <h2 class="txt-get-in">Get in touch with us</h2>
     </div>
+    @if (ViewBag.flag)
+    {
+        <div class="alert alert-success alert-dismissible fade show justify-content-center" role="alert">
+            <strong>Your query has been submitted successfully</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+    <div class="container">
+
+        <form enctype="multipart/form-data" asp-controller="Contact" asp-action="Contact" method="post">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-sm-6 col">
+                    <div class=form-group>
+                        <input type="text" class="form-control" required asp-for="FirstName" id="fname" placeholder="First name">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col">
+                    <div class=form-group>
+                        <input type="text" class="form-control" required asp-for="LastName" id="lname" placeholder="Last name">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">+44</span>
+                        </div>
+                        <input type="tel" class="form-control" required asp-for="PhoneNumber" id="phone" placeholder="Mobile number">
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="form-group">
+                        <input type="email" class="form-control" asp-for="Email" id="email" placeholder="Email">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="form-group">
+                        <select class="form-control" asp-for="Subject">
+                            <option value="" hidden>Subject</option>
+                            <option value="contact">contact</option>
+                            <option value="private">Private</option>
+                            <option value="FAQ">FAQ</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="form-group">
+                        <textarea class="form-control" id="msg" asp-for="Message" placeholder="Message" type="text" style="height: 140px;"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <button type="submit" class="btn-form" formmethod="post">Submit</button>
+            </div>
+
+        </form>
     </div>
 
+</section>
+<section class="map-section">
+    <div class="mapouter">
+        <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=936&amp;height=286&amp;hl=en&amp;q=nail-salon&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.fridaynightfunkin.net/friday-night-funkin-mods-fnf-play-online/">FNF Mods</a></div>
+        <style>
+            .mapouter {
+                position: relative;
+                text-align: right;
+                width: 100%;
+                height: 286px;
+            }
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/3960232895.js"></script>
+            .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                width: 100%;
+                height: 286px;
+            }
 
-</body>
+            .gmap_iframe {
+                height: 286px !important;
+            }
+        </style>
+    </div>
+</section>
 
-</html>
+<h2 class="get-newsletter">GET OUR NEWSLETTER</h2>
+
+<div class="form1">
+
+    <input type="email" id="email" placeholder="Your Email" class="email">
+    <button class="submit">
+        submit
+
+    </button>
+    <div class="up-aero">
+        <img src="~/Assets/image/up-aero.png" style="margin-left: 14px; margin-top: 18px;">
+    </div>
+</div>
+
+
 

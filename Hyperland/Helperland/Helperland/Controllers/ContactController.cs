@@ -27,7 +27,7 @@ namespace Helperland.Controllers
         {
             ContactU newContact = new ContactU
             {
-                Name = @model.FirstName + model.LastName,
+                Name = @model.FirstName +" "+ model.LastName,
                 Email=model.Email,
                 Subject=model.Subject,
                 PhoneNumber=model.PhoneNumber,
