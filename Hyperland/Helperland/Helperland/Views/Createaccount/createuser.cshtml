@@ -17,9 +17,19 @@
     </section>
 
     <section>
+        @if (TempData["Message"] != null)
+        {
+            <div class="container d-flex justify-content-center">
+                <div class="alert alert-success col-lg-6">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Account Created Successfull!</strong>
+                </div>
+            </div>
+        }
         <form enctype="multipart/form-data" asp-controller="Createaccount" asp-action="createuser" method="post">
             <div class="container">
                 <div class="row justify-content-center ">
+
                     <div class="col-lg-4 col-sm-6 col-12">
                         <div class="form-group">
                             <input class="form-control" type="text" asp-for="FirstName" id="fname" placeholder="First Name">
@@ -86,7 +96,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-12 col-12 form-group">
                         <label class="checkbox-inline">
-                            <input type="checkbox" asp-for="Ischecked" class="form-check-inline" required style="height: auto;">
+                            <input type="checkbox" asp-for="Ischecked" class="form-check-inline" style="height: auto;">
                             <span class="terms">I have read the <a href="">privacy policy</a> .</span>
                             <span asp-validation-for="Ischecked" class="text-danger"></span>
                         </label>
@@ -103,7 +113,7 @@
                     Already registrered?  <a href="">Login now</a>
                 </div>
             </div>
-            
+
         </form>
     </section>
     

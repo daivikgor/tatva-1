@@ -36,7 +36,7 @@
 
 
                             <li class="nav-item Rounded-Rectangle">
-                                <a href="#" class="nav-link">
+                                <a href="@Url.Action("bookservice","Service")" class="nav-link">
                                     Book a cleaner
                                 </a>
                             </li>
@@ -79,7 +79,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="@Url.Action("Price", "Home")" class="nav-link ">
+                                <a href="@Url.Action("Prices", "Home")" class="nav-link ">
                                     Prices
                                 </a>
                             </li>
@@ -161,6 +161,12 @@
                         </div>
                         <div class="modal-body">
                             <form class="form-group" asp-controller="Account" asp-action="login" method="post">
+                                @if (ViewBag.error != null){
+                                <div class="alert alert-danger justify-content-center">
+                                    <h6>@ViewBag.error</h6>
+                                </div>
+                                }
+
                                 <div class="icon-text-box right">
                                     <input class="form-control" asp-for="Email" id="email" type="email" placeholder="E-Mail" required>
                                     <!-- <img src="Assets/image/user-login.png"> -->

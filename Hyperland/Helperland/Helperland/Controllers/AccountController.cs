@@ -27,7 +27,8 @@ namespace Helperland.Controllers
         [HttpPost]
         public IActionResult login(createviewmodel model)
         {
-            User user = dc.Users.Where(x => x.Email == model.Email && x.Password == model.Password).FirstOrDefault();
+            var Password = Crypto.Hash(model.Password);
+            User user = dc.Users.Where(x => x.Email == model.Email && x.Password == Password).FirstOrDefault();
 
             if (user != null)
             {
@@ -38,7 +39,7 @@ namespace Helperland.Controllers
             else
             {
                 ViewBag.error = "Username or password is invalid";
-                return View("~/views/Home/Index.cshtml");
+                return View();
             }
         }
         
@@ -79,7 +80,7 @@ namespace Helperland.Controllers
             var user = dc.Users.Where(x => x.Email == model.Email).FirstOrDefault();
             if (user != null)
             {
-                user.Password = model.newPassword;
+                user.Password = Crypto.Hash(model.newPassword);
                 dc.Users.Update(user);
                 dc.SaveChanges();
                 return View("~/views/Home/Index.cshtml");

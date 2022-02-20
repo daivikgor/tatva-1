@@ -1,6 +1,7 @@
-﻿
+﻿@using Microsoft.AspNetCore.Http
+
 @{
-    ViewData["Title"] = "_Layout2";
+    
 }
 
 <!DOCTYPE html>
@@ -9,7 +10,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prices</title>
     <link rel="stylesheet" href="~/Assets/css/layout.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" href="~/Assets/image/white-logo-transparent-background-copy-4.png" type="image/icon type">
@@ -26,48 +26,124 @@
 
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ml-auto text-center">
-                <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
-                    <a href="#" class="nav-link">
-                        Book Now
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="@Url.Action("Prices","Home")" class="nav-link Rounded-Rectangle">
-                        Prices & Services
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        Warranty
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        Blog
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="@Url.Action("Contact","Contact")" class="nav-link">
-                        Contact
-                    </a>
-                </li>
-                <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
-                    <a href="#" class="nav-link">
-                        Login
-                    </a>
-                </li>
-                <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
-                    <a href="@Url.Action("BecomeHelper","becomehelper")" class="nav-link">
-                        Become a Helper
-                    </a>
-                </li>
+
+                @if (Context.Session.GetString("username") == null)
+
+                {
+                    <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
+                        <a href="@Url.Action("bookservice","Service")" class="nav-link">
+                            Book Now
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("Prices","Home")" class="nav-link Rounded-Rectangle">
+                            Prices & Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Warranty
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("Contact","Contact")" class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
+                        <a href="@Url.Action("Index","Home")" class="nav-link">
+                            Login
+                        </a>
+                    </li>
+                    <li class="nav-item Rounded-Rectangle" style="background-color: #29626D;">
+                        <a href="@Url.Action("BecomeHelper","becomehelper")" class="nav-link">
+                            Become a Helper
+                        </a>
+                    </li>
+                }
+                @if (Context.Session.GetString("username") != null)
+                {
+                    <li class="nav-item" >
+                        <a href="@Url.Action("bookservice","Service")" class="nav-link Rounded-Rectangle" style="background-color: #29626D;">
+                            Book Now
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("Prices","Home")" class="nav-link Rounded-Rectangle">
+                            Prices & Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Warranty
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("Contact","Contact")" class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item afterLogin">
+                        <a href="#" class="nav-link">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item afterLogin">
+                        <a href="#" class="nav-link">
+                            My Setting
+                        </a>
+                    </li>
+                    <li class="nav-item afterLogin">
+                        <a href="@Url.Action("logout", "Home")" class="nav-link">
+                            Logout
+                        </a>
+                    </li>
+
+                    <li class="nav-item remove">
+                        <a href="" class="nav-link" type="button">
+                            <div>
+                                <img src="~/Assets/image/icon-notification.png">
+                            </div>
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown remove-to">
+                        <a href="#" type="button " class="nav-link dropdown-toggle" data-toggle="dropdown">
+
+                            <img src="~/Assets/image/user.png">
+                            <img src="~/Assets/image/keyboard-right-arrow-button.png" style="animation:none!important" onclick="transformArrow(this)">
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-item-text">
+                                    Welcome @Context.Session.GetString("username")
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Dashboard </a>
+                                <a class="dropdown-item" href="#">My Setting</a>
+                                <a class="dropdown-item" href="@Url.Action("logout","home")">Logout</a>
+                            </div>
+                        </a>
+                    </li>
+                }
             </ul>
         </div>
     </nav>
 
     @RenderBody()
 
-   
+
 
 
 

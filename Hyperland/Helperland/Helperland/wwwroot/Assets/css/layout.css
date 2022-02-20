@@ -18,7 +18,7 @@ p { font-size: 16px; font-weight: 400; color: #4F4F4F; line-height: 1.3; }
   letter-spacing: 0.5px;
 }
 ul li {
-    margin: 0px 3px;
+    margin: 0px 5px;
 }
 
 .fixed-top {
@@ -27,6 +27,10 @@ ul li {
     right: 0;
     left: 0;
     z-index: 1030;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
 }
 
 
@@ -96,5 +100,31 @@ ul li {
 }
 .footer-3{
   text-align: center;display: flex;justify-content: center;align-items: center;color: #9ba0a3;
+}
+.afterLogin {
+    display: none !important;
+}
+
+@media (max-width:1456px) {
+    .afterLogin {
+        display: none !important;
+    }
+}
+
+@media(max-width:1184px) {
+    
+    .afterLogin {
+        display: none !important;
+    }
+}
+
+@media(max-width:992px) {
+    .afterLogin {
+        display: block !important;
+    }
+
+    .remove-to {
+        display: none;
+    }
 }
   

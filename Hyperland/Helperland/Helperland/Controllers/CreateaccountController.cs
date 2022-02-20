@@ -56,15 +56,17 @@ namespace Helperland.Controllers
                 };
                 _HelperlandContext.Add(user);
                 _HelperlandContext.SaveChanges();
+                TempData["Message"] = "Registered Successfull";
 
-                return RedirectToAction("login", "Account");
+                return RedirectToAction("createuser");
             }
 
             else
             {
                 message = "Invalid Request";
+                return View(model);
             }
-           return View(model);
+           
         }
 
         [NonAction]

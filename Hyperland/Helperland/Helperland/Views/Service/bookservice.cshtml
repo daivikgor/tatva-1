@@ -1,0 +1,273 @@
+﻿
+@{
+    ViewData["Title"] = "bookservice";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+
+
+<head><link rel="stylesheet" href="~/Assets/css/about.css"></head>
+    
+    <img src="~/Assets/image/book-service-banner.jpg" class="about-banner">
+
+    <h1 class="txt-few-words">Set up your cleaning service</h1>
+    <div class="diamond">
+        <hr class=diam-break-left>
+        <img src="~/Assets/image/forma-1-copy-5.png" class="img-diamond">
+        <hr class="diam-break-right">
+    </div>
+
+    <section class="schedule-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-12">
+                    <div class="services-header">
+                        <div class="service-link ">
+                            <a href="#">
+                                <img src="~/Assets/image/setup-service.png" class="img-service">
+                                <span class="txt-service">Setup Service</span>
+                            </a>
+                        </div>
+                        <div class="service-link active">
+                            <a href="#">
+                                <img src="~/Assets/image/schedule.png" class="img-service">
+                                <span class="txt-service">Schedule & Plan</span>
+                            </a>
+                        </div>
+                        <div class="service-link">
+                            <a href="#">
+                                <img src="~/Assets/image/details.png" class="img-service">
+                                <span class="txt-service">Your Details</Details></span>
+                            </a>
+                        </div>
+                        <div class="service-link ">
+                            <a href="#">
+                                <img src="~/Assets/image/payment.png" class="img-service">
+                                <span class="txt-service">Make Payment</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    @*<div class="bed-bath">
+                        <h3 class="txt-bed-bath">select number of rooms and bath</h3>
+                        <form class="form-inline">
+                            <select class="form-control m_3">
+                                <option>bed1</option>
+                                <option>bed1</option>
+                                <option>bed1</option>
+                                <option>bed1</option>
+                            </select>
+                            <select class="form-control m_3">
+                                <option>bath1</option>
+                                <option>bath1</option>
+                                <option>bath1</option>
+                                <option>bath1</option>
+                            </select>
+                        </form>
+                    </div>*@
+
+                    <hr>
+                    <div class="bed-bath">
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <h3 class="txt-bed-bath">when you need the cleaner?</h3>
+                                <form class="form-inline">
+                                    <input type="date" class="form-control m_3">
+                                    <select class="form-control m_3">
+                                        <option>01:00PM</option>
+                                        <option>02:00PM</option>
+                                        <option>03:00PM</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <h3 class="txt-bed-bath">how long do you need your cleaner to stay?</h3>
+                                <form class="form-inline">
+                                    <select class="form-control m_3">
+                                        <option>1.0 hrs</option>
+                                        <option>2.0 hrs</option>
+                                        <option>3.0 hrs</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="bed-bath">
+                        <h3 class="txt-bed-bath">Extra Services</h3>
+                        <div class="extra-services">
+                            <div class="extra-img-txt">
+                                <div class="img-extra">
+                                    <img src="~/Assets/image/service_1.png" class="img-center">
+                                </div>
+                                <h3 class="txt-extra">Inside cabinets</h3>
+                            </div>
+
+                            <div class="extra-img-txt">
+                                <div class="img-extra">
+                                    <img src="~/Assets/image/service_2.png" class="img-center">
+                                </div>
+                                <h3 class="txt-extra">Inside fridge</h3>
+                            </div>
+                            <div class="extra-img-txt">
+                                <div class="img-extra">
+                                    <img src="~/Assets/image/service_3.png" class="img-center">
+                                </div>
+                                <h3 class="txt-extra">Inside oven</h3>
+                            </div>
+                            <div class="extra-img-txt">
+                                <div class="img-extra">
+                                    <img src="~/Assets/image/service_4.png" class="img-center">
+                                </div>
+                                <h3 class="txt-extra">Laundry<br> wash & dry</h3>
+                            </div>
+                            <div class="extra-img-txt">
+                                <div class="img-extra">
+                                    <img src="~/Assets/image/service_5.png" class="img-center">
+                                </div>
+                                <h3 class="txt-extra">Interior<br> windows</h3>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="bed-bath">
+                        <h3 class="txt-comments">Comments</h3>
+                        <form>
+                            <textarea class="form-control" rows="3"> </textarea>
+                            <div>
+                                <input class="" type="checkbox" id="gridcheck1">
+                                <label for="gridcheck1" class="form-check-label txt-check">
+                                    I have pets at home
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <hr>
+
+                    <button class="btn-continue">
+                        Continue
+                    </button>
+
+
+                </div>
+                
+
+                <div class="col-md-4 col-12">
+                    <div class="payment-box">
+                        <div class="payment-summary">
+                            <h3 class="txt-payment">Payment Summary</h3>
+                        </div>
+
+                        <div class="mini-box">
+                            <div class="m-3">
+                                <h4 class="txt-minibox">
+                                    
+                                    01/01/2018  4:00 pm <br>
+
+                                    1bed, 1bath.
+                                </h4>
+                                <h4 class="htxt-minibox">
+                                    Duration
+                                </h4>
+                                <h4 class="txt-minibox">
+                                    <span style="float:left">basic</span>
+                                    <span style="float:right">3 Hrs</span>
+                                </h4>
+                                <br>
+                                <h4 class="txt-minibox">
+                                    <span style="float:left">Inside cabinet (extra)</span>
+                                    <span style="float:right">30 Mins</span>
+                                </h4>
+                                <br>
+                                <h4 class="htxt-minibox">
+                                    <span style="float:left">Total Service Time</span>
+                                    <span style="float: right">3.5 Hrs</span>
+                                </h4>
+                                <br>
+
+                                <hr>
+                                <h4 class="txt-minibox">
+                                    <span style="float: left">per cleaning</span>
+                                    <span style="float: right">$ 87</span>
+                                </h4>
+                                <br>
+                                <h4 class="txt-minibox">
+                                    <span style="float: left">Discount</span>
+                                    <span style="float: right">-$ 27</span>
+                                </h4>
+                                <br>
+                                <hr>
+                                <h4 style="color:#1d7a8c">
+                                    <span style="float: left">Discount</span>
+                                    <span style="float: right;font-size:22px;font-weight: bold;">$ 63</span>
+                                </h4>
+                                <br>
+                                <h4 class="htxt-minibox">
+                                    <span style="float: left">Effective price</span>
+                                    <span style="float: right">$ 50.4</span>
+                                </h4>
+                                <br>
+
+                                <h4 class="txt-minibox">You will save 20% according to s 35a EStG</h4>
+
+
+                            </div>
+                            <div class="see-what">
+                                <p>See what is always included </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questions">
+                        <h2 class="txt-questions">Questions?</h2>
+                        <p>
+                            <span><i class="fas fa-angle-right"></i>which helperland professional will come to my place?</span>
+                        </p>
+                        <hr>
+                        <p>
+                            <span><i class="fas fa-angle-right"></i>which helperland professional will come to my place?</span>
+                        </p>
+                        <hr>
+                        <p>
+                            <span><i class="fas fa-angle-right"></i>which helperland professional will come to my place?</span>
+                        </p>
+                        <hr>
+                        <p>
+                            <span><i class="fas fa-angle-right"></i>which helperland professional will come to my place?</span>
+                        </p>
+                        <hr>
+                        <p>
+                            <span><i class="fas fa-angle-right"></i>which helperland professional will come to my place?</span>
+                        </p>
+                        <hr><p>
+                            <span><i class="fas fa-angle-right"></i>which helperland professional will come to my place?</span>
+                        </p>
+                        <hr>
+                        <p>
+                            <a href="#">For more help</a>
+                        </p>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div>
+        <div class="get-newsletter">
+            <p style="font-weight: bold;">GET OUR NEWSLETTER</p>
+        </div>
+        <div class="form1">
+
+            <input type="email" id="email" placeholder="Your Email" class="email">
+            <button class="submit">submit </button>
+        </div>
+
+       

@@ -28,7 +28,10 @@ namespace Helperland.ViewModel
         [DataType(DataType.Password)]
         [Compare("Password",ErrorMessage ="password and confirm password does not match")]
         public string Confirmpassword { get; set; }
-        
+
+        [Required(ErrorMessage = "Required field")]
+        public bool Ischecked { get; set; }
+
         public bool? IsRegisteredUser { get; set; }
         public bool? WorksWithPets { get; set; }
         public int? LanguageId { get; set; }
@@ -41,8 +44,7 @@ namespace Helperland.ViewModel
         public bool? IsDeleted { get; set; }
 
 
-        [Required(ErrorMessage ="Required field")]
-        public bool Ischecked { get; set; }
+        
 
 
         

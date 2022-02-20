@@ -127,20 +127,21 @@ ul li{
   }
 
 .services-header{
-   height: 65px;
-    background: #F3F3F3;
+   height: 60px;
+    
     display: flex;
     justify-content: start;
     align-items: center;
 }
 .service-link{
-    width: 180px;
+    /* width: 180px; */
     height: 67px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background: #F3F3F3;
 }
 .service-link a{
   color: #000;
@@ -156,7 +157,7 @@ ul li{
 .active a{
   color: #fff;
 }
-.services-header .service-link:hover{
+.services-header .active:hover{
   background-color: #1D7A8C;
 }
 .services-header a:hover{
