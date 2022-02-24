@@ -162,6 +162,29 @@ ul li{
 .services-header a:hover{
   color: #fff;
 }
+.active-tab {
+    background-color: white !important;
+    color: #2b5998 !important;
+}
+
+.tab {
+    background-color: #1D7A8C;
+    color: white;
+    cursor: pointer;
+    width: 180px;
+    height: 67px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.remove{
+    display:none!important;
+}
+
+.special {
+    background-color: green;
+}
 
 .txt-bed-bath{
   font-size: 20px;
@@ -177,11 +200,22 @@ ul li{
 .m_3{
   margin-left: 0.7rem;
 }
-hr{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(0,0,0,.1);
+.btn-availability {
+    width: 141px;
+    height: 48px;
+    float: right;
+    background: #1D7A8C;
+    border-radius: 23px;
+    border:none!important;
+    color: #FFFFFF;
+    /*padding: 11px 25px;*/
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
 }
 .extra-services{
   display:flex;
@@ -285,3 +319,18 @@ hr{
   text-align: center;
   margin:20px 0 ;
 }
+input[type="checkbox"][id^="mycheckbox"] {
+    display: none;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+

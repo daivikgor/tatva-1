@@ -74,7 +74,7 @@
                         @if (Context.Session.GetString("username") != null)
                         {
                             <li class="nav-item Rounded-Rectangle">
-                                <a href="#" class="nav-link ">
+                                <a href="@Url.Action("bookservice","Service")" class="nav-link ">
                                     Book a Cleaner
                                 </a>
                             </li>
@@ -114,7 +114,7 @@
                                     Logout
                                 </a>
                             </li>
-                            
+
                             <li class="nav-item remove">
                                 <a href="" class="nav-link" type="button">
                                     <div>
@@ -123,7 +123,7 @@
 
                                 </a>
                             </li>
-                            
+
                             <li class="nav-item dropdown remove-to">
                                 <a href="#" type="button " class="nav-link dropdown-toggle" data-toggle="dropdown">
 
@@ -161,10 +161,11 @@
                         </div>
                         <div class="modal-body">
                             <form class="form-group" asp-controller="Account" asp-action="login" method="post">
-                                @if (ViewBag.error != null){
-                                <div class="alert alert-danger justify-content-center">
-                                    <h6>@ViewBag.error</h6>
-                                </div>
+                                @if (ViewBag.error != null)
+                                {
+                                    <div class="alert alert-danger justify-content-center">
+                                        <h6>@ViewBag.error</h6>
+                                    </div>
                                 }
 
                                 <div class="icon-text-box right">
@@ -197,7 +198,6 @@
                 </div>
             </div>
             <!-- login modal over -->
-
             <!--Forget password Modal start-->
 
             <div class="modal fade" id="forgotModel">
@@ -212,7 +212,7 @@
                         <div class="modal-body">
                             <form class="form-group" asp-controller="Account" asp-action="ForgotPassword" method="post">
                                 <div class="icon-text-box right">
-                                    <input class="form-control" asp-for="Email"  id="email" type="email" placeholder="E-Mail-Address" >
+                                    <input class="form-control" asp-for="Email" id="email" type="email" placeholder="E-Mail-Address">
                                     <!-- <img src="Assets/image/user-login.png"> -->
                                 </div>
                                 <div style="text-align: center;">
@@ -286,12 +286,15 @@
             </div>
             @RenderSection("Scripts", required: false)
 
-    </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/3960232895.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script src="https://kit.fontawesome.com/3960232895.js"></script>
+            <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+            <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+</body>
+    
 
-</html>
+    </html>
 
 

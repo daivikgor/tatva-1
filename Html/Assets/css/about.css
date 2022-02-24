@@ -126,43 +126,42 @@ ul li{
     text-align: center;display: flex;justify-content: center;align-items: center;color: #9ba0a3;
   }
 
-.services-header{
-   height: 60px;
-    
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-.service-link{
-    /* width: 180px; */
-    height: 67px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: #F3F3F3;
-}
-.service-link a{
-  color: #000;
-  text-decoration: none;
-}
-.txt-service{
-  font-size: 16px;
-  font-family: Roboto;
-}
-.active{
-  background-color: #1D7A8C;
-}
-.active a{
-  color: #fff;
-}
-.services-header .active:hover{
-  background-color: #1D7A8C;
-}
-.services-header a:hover{
-  color: #fff;
-}
+  .services-header{
+    height: 65px;
+     background: #F3F3F3;
+     display: flex;
+     justify-content: start;
+     align-items: center;
+ }
+ .service-link{
+     width: 180px;
+     height: 67px;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+ }
+ .service-link a{
+   color: #000;
+   text-decoration: none;
+ }
+ .txt-service{
+   font-size: 16px;
+   font-family: Roboto;
+ }
+ .active{
+   background-color: #1D7A8C;
+ }
+ .active a{
+   color: #fff;
+ }
+ .services-header .service-link:hover{
+   background-color: #1D7A8C;
+ }
+ .services-header a:hover{
+   color: #fff;
+ }
 
 .txt-bed-bath{
   font-size: 20px;
