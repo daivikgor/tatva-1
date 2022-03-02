@@ -221,6 +221,7 @@ hr {
   display:flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap:30px;
 }
 .extra-img-txt{
   display:flex;
@@ -310,6 +311,50 @@ hr {
   color: #8D8D8D;
   padding-top: 10px;
   padding-left: 20px;
+}
+.saveAdd {
+    background-color: #6aa6b2;
+    border: none;
+    width: 110px;
+    border-radius: 24px;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-family: Roboto;
+}
+.cancelAdd {
+    border: none;
+    background-color: #f8f8f8;
+    width: 110px;
+    border-radius: 24px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: Roboto;
+}
+/*#AddForm {
+    display: none;
+}*/
+.add-Add-btn {
+    background-color: white;
+    min-width: 160px;
+    min-height: 44px;
+    border: 1px solid #1d7a8c;
+    border-radius: 20px;
+    font-family: Roboto;
+    color: #1d7a8c;
+}
+    .add-Add-btn:hover {
+        background-color: #1d7a8c;
+        color: white;
+    }
+
+.select-pro-btn {
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #CCCCCC;
+    min-width: 120px;
+    min-height: 34px;
+    font-family: Roboto;
 }
 
 .txt-questions{

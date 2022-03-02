@@ -166,3 +166,4 @@ F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\bin\Debug\netcore
 F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
 F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\obj\Debug\netcoreapp3.1\Razor\Views\Service\bookservice.cshtml.g.cs
+F:\Tatva\tatva project\tatva-1\Hyperland\Helperland\Helperland\obj\Debug\netcoreapp3.1\Razor\Views\Service\Details.cshtml.g.cs

@@ -29,7 +29,7 @@
                                 <span class="txt-service">Setup Service</span>
                             </a>
                         </div>
-                        <div class="service-link " id="tab2" onclick="tab2click()">
+                        <div class="service-link  " id="tab2" onclick="tab2click()">
                             <a href="#">
                                 <img id="img-2" src="~/Assets/image/schedule.png" class="img-service">
                                 <span class="txt-service">Schedule & Plan</span>
@@ -85,15 +85,16 @@
                                 </div>
                             </div>
                         </form>
-                    
-                        <div id="tabContent2" style="display:none;">
-                            <div class="bed-bath">
-                                <div class="row">
-                                    <div class="col-md-6 col-12">
-                                        <h3 class="txt-bed-bath">when you need the cleaner?</h3>
-                                        <form class="form-inline">
-                                            <input type="date" class="form-control m_3">
-                                            <select class="form-control m_3">
+
+                        <form enctype="multipart/form-data" class="form-inline" action="@Url.Action("schedule")">
+                            <div id="tabContent2" style="display:none;" method="post" action="@Url.Action("schedule")">
+                                <div class="bed-bath">
+                                    <div class="row">
+                                        <div class="col-md-6 col-12">
+                                            <h3 class="txt-bed-bath">when you need the cleaner?</h3>
+
+                                            <input type="date" class="form-control m_3" id="datepicker" asp-for="ServiceStartDate">
+                                            <select class="form-control m_3" asp-for="ServiceTime">
                                                 <option>11:00AM</option>
                                                 <option>12:00PM</option>
                                                 <option>01:00PM</option>
@@ -105,12 +106,12 @@
                                                 <option>07:00PM</option>
                                                 <option>08:00PM</option>
                                             </select>
-                                        </form>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <h3 class="txt-bed-bath">how long do you need your cleaner to stay?</h3>
-                                        <form class="form-inline">
-                                            <select class="form-control m_3">
+
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <h3 class="txt-bed-bath">how long do you need your cleaner to stay?</h3>
+
+                                            <select class="form-control m_3" asp-for="ServiceHours">
                                                 <option>1.0 hrs</option>
                                                 <option>2.0 hrs</option>
                                                 <option>3.0 hrs</option>
@@ -121,89 +122,142 @@
                                                 <option>8.0 hrs</option>
                                                 <option>9.0 hrs</option>
                                             </select>
-                                        </form>
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <hr>
+                                <hr>
 
-                            <div class="bed-bath">
-                                <h3 class="txt-bed-bath">Extra Services</h3>
-                                <div class="extra-services">
-                                    <input type="checkbox" id="mycheckbox1" onclick="cabinet()" />
-                                    <label for="mycheckbox1" onclick="cabinet()" class="check-label">
-                                        <div class="extra-img-txt">
-                                            <div class="img-extra" id="1">
-                                                <img src="~/Assets/image/service_1.png" id="cabinetimg" class="img-center">
+                                <div class="bed-bath">
+                                    <h3 class="txt-bed-bath">Extra Services</h3>
+                                    <div class="extra-services">
+                                        <input id="count" value="0" type="hidden" asp-for="ExtraHours" />
+                                        <input type="checkbox" id="mycheckbox1" onclick="cabinet()" />
+                                        <label for="mycheckbox1" onclick="cabinet()" class="check-label">
+                                            <div class="extra-img-txt">
+                                                <div class="img-extra" id="1">
+                                                    <img src="~/Assets/image/service_1.png" id="cabinetimg" class="img-center">
+                                                </div>
+                                                <h3 class="txt-extra">Inside cabinets</h3>
                                             </div>
-                                            <h3 class="txt-extra">Inside cabinets</h3>
-                                        </div>
-                                    </label>
-                                    <input type="checkbox" id="mycheckbox2" onclick="fridge()" />
-                                    <label for="mycheckbox2" onclick="fridge()" class="check-label">
-                                        <div class="extra-img-txt">
-                                            <div class="img-extra" id="2" >
-                                                <img src="~/Assets/image/service_2.png" id="fridgeimg" class="img-center">
-                                            </div>
-                                            <h3 class="txt-extra">Inside fridge</h3>
-                                        </div>
-                                    </label>
-
-                                    <input type="checkbox" id="mycheckbox3" onclick="oven()" />
-                                    <label for="mycheckbox3" onclick="oven()" class="check-label">
-                                        <div class="extra-img-txt">
-                                            <div class="img-extra" id="3">
-                                                <img src="~/Assets/image/service_3.png" id="ovenimg" class="img-center">
-                                            </div>
-                                            <h3 class="txt-extra">Inside oven</h3>
-                                        </div>
-                                    </label>
-
-                                    <input type="checkbox" id="mycheckbox4" onclick="laundry()" />
-                                    <label for="mycheckbox4" onclick="laundry()" class="check-label">
-                                        <div class="extra-img-txt">
-                                            <div class="img-extra" id="4">
-                                                <img src="~/Assets/image/service_4.png" id="laundryimg" class="img-center">
-                                            </div>
-                                            <h3 class="txt-extra">Laundry<br> wash & dry</h3>
-                                        </div>
-                                    </label>
-                                    <input type="checkbox" id="mycheckbox5" onclick="windows()" />
-                                    <label for="mycheckbox5" onclick="windows()" class="check-label">
-                                        <div class="extra-img-txt" >
-                                            <div class="img-extra" id="5">
-                                                <img src="~/Assets/image/service_5.png" id="windowsimg" class="img-center">
-                                            </div>
-                                            <h3 class="txt-extra">Interior<br> windows</h3>
-                                        </div>
-                                    </label>
-
-                                </div>
-                            </div>
-
-                            <hr>
-                            <div class="bed-bath">
-                                <h3 class="txt-comments">Comments</h3>
-                                <form>
-                                    <textarea class="form-control" rows="3"> </textarea>
-                                    <div>
-                                        <input class="" type="checkbox" id="gridcheck1">
-                                        <label for="gridcheck1" class="form-check-label txt-check">
-                                            I have pets at home
                                         </label>
-                                    </div>
-                                </form>
-                            </div>
-                            <hr>
+                                        <input type="checkbox" id="mycheckbox2" onclick="fridge()" />
+                                        <label for="mycheckbox2" onclick="fridge()" class="check-label">
+                                            <div class="extra-img-txt">
+                                                <div class="img-extra" id="2">
+                                                    <img src="~/Assets/image/service_2.png" id="fridgeimg" class="img-center">
+                                                </div>
+                                                <h3 class="txt-extra">Inside fridge</h3>
+                                            </div>
+                                        </label>
 
-                            <button class="btn-continue">
-                                Continue
-                            </button>
-                        </div>
-                        <div id="tabContent3" style="display:none;">
-                            <div id="divAddress"></div><br />
-                            <input type="button" class="btn-continue" value="Continue" onclick="SaveAddress();" />
-                        </div>
+                                        <input type="checkbox" id="mycheckbox3" onclick="oven()" />
+                                        <label for="mycheckbox3" onclick="oven()" class="check-label">
+                                            <div class="extra-img-txt">
+                                                <div class="img-extra" id="3">
+                                                    <img src="~/Assets/image/service_3.png" id="ovenimg" class="img-center">
+                                                </div>
+                                                <h3 class="txt-extra">Inside oven</h3>
+                                            </div>
+                                        </label>
+
+                                        <input type="checkbox" id="mycheckbox4" onclick="laundry()" />
+                                        <label for="mycheckbox4" onclick="laundry()" class="check-label">
+                                            <div class="extra-img-txt">
+                                                <div class="img-extra" id="4">
+                                                    <img src="~/Assets/image/service_4.png" id="laundryimg" class="img-center">
+                                                </div>
+                                                <h3 class="txt-extra">Laundry<br> wash & dry</h3>
+                                            </div>
+                                        </label>
+                                        <input type="checkbox" id="mycheckbox5" onclick="windows()" />
+                                        <label for="mycheckbox5" onclick="windows()" class="check-label">
+                                            <div class="extra-img-txt">
+                                                <div class="img-extra" id="5">
+                                                    <img src="~/Assets/image/service_5.png" id="windowsimg" class="img-center">
+                                                </div>
+                                                <h3 class="txt-extra">Interior<br> windows</h3>
+                                            </div>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <hr>
+
+
+                                <div class="commnets">
+                                    <p><b>Comments</b></p>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="comments" asp-for="Comments" rows="3"></textarea>
+                                </div>
+                                <div class="form-check justify-content-lg-start">
+                                    <input type="checkbox" asp-for="HasPets" class="form-check-input" id="pet_chk">
+                                    <label class="form-check-label" for="pets">I have pets at home</label>
+                                </div>
+
+                                <hr>
+                                
+                               <button type="submit" formmethod="post" formaction="@Url.Action("schedule")" class="btn-continue" style="float: right;" >Continue</button>
+                            </div>
+                        </form>
+                        
+
+                        
+                        
+                        <form method="post" action="@Url.Action("Details")">
+                            <div id="tabContent3" style="display:none;">
+                                <div class="details" id="div3">
+                                    <div id="address_div" class="container" method="post" action="@Url.Action("Details")">
+                                    </div>
+                                </div>
+                                <div class="row address" id="AddForm">
+
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <label>Street Name</label>
+                                            <input type="text" class="form-control" placeholder="Enter Street Name" id="street" asp-for="AddressLine1">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label>House Number</label>
+                                            <input type="text" class="form-control" placeholder="Enter House Number" id="house_no" asp-for="AddressLine2">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <label>Postal code</label>
+                                            <input type="text" class="form-control" placeholder="Enter Postalcode" id="postalcode" asp-for="PostalCode">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label>City</label>
+                                            <input type="text" class="form-control" placeholder="Enter City" id="city" asp-for="City">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <label>Phone no</label>
+                                            <div class="form-group mt-2">
+                                                <div class="input-group ">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">+49</div>
+                                                    </div>
+                                                    <input class="form-control" type="tel" id="MobileNo" placeholder="Mobile Number" asp-for="Mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="saveAdd" formmethod="post" value="saveAdd" name="action" onclick="alert('Your address saved successfully please select your address from Your Details tab to further booking')">Save</button>
+                                        <input type="button" value="Cancel" class="cancelAdd" onclick="cancelAdd()">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        
+
+
                         <div id="tabContent4" style="display:none;">
                             You are booking service request for zipcode <span id="confirmZipCode"></span>
                             <br /><br />
@@ -383,6 +437,8 @@
             document.getElementById('img-2').src = "../Assets/image/schedule.png";
             document.getElementById('img-4').src = "../Assets/image/payment.png";
             document.getElementById('img-1').src = "../Assets/image/setup-service.png";
+
+            $("#address_div").load('/Service/Details');
         }
         function tab4click() {
             $("#tab4").addClass("active");
@@ -505,7 +561,17 @@
                 })
 
             }
-        }
+            }
+
+            function displayAddForm() {
+                document.getElementById('addAdd').style.display = "none";
+                document.getElementById('AddForm').style.display = "block";
+            }
+
+            function cancelAdd() {
+                document.getElementById('addAdd').style.display = "block";
+                document.getElementById('AddForm').style.display = "none";
+            }
 
         </script>
 
